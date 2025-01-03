@@ -6,56 +6,69 @@ namespace FinTrail.Services
 {
     public class UserService : UserBase, IUserInterface
     {
-        // Stores the list of users loaded from the file.
         private List<User> _users;
 
         // Default admin username and password for initial seeding.
         public const string SeedUsername = "admin";
         public const string SeedPassword = "password";
 
-        // Constructor to initialize the user service.
         public UserService()
         {
-            // Load the list of users from the JSON file.
             _users = LoadUsers();
 
-            // If no users are present, add a default admin user and save to the file.
+            // Ensure there's an admin user if no users exist.
             if (!_users.Any())
             {
-                _users.Add(new User { Username = SeedUsername, Password = SeedPassword });
+                _users.Add(new User { Username = SeedUsername, Password = SeedPassword});
                 SaveUsers(_users);
             }
         }
 
-        // Retrieves the list of all users.
         public List<User> GetAllUsers()
         {
-            return _users; // Return the in-memory list of users.
+            return _users;
         }
 
-        // Logs in a user by checking if their username and password exist in the list.
-        // Returns true if the user is authenticated, false otherwise.
+        // Modified Login method to check against users.json
         public bool Login(User user)
         {
-            // Validate input for null or empty values.
+            // Validate input for null or empty values
             if (string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Password))
             {
-                return false; // Invalid input.
+                return false; // Invalid input
             }
 
-            // Check if the username and password match any user in the list.
-            return _users.Any(u => u.Username == user.Username && u.Password == user.Password);
+            // Check if the username and password match any user in the list (loaded from users.json)
+            var existingUser = _users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password);
+
+            if (existingUser != null)
+            {
+                // Login successful, update the currency field
+                existingUser.SelectedCurrency = user.SelectedCurrency;
+
+                // Save the updated users list back to the JSON file
+                SaveUsers(_users);
+
+                return true;
+            }
+
+            return false; // Login failed: invalid username or password
         }
 
-        // Registers a new user. Returns false if the username already exists, true if registration is successful.
+        // Register method remains the same
         public bool Register(User user)
         {
-            // Check if the username already exists in the list.
-            if (_users.Any(u => u.Username == user.Username))
-                return false; // Registration failed: user already exists.
+            //checking if username already exists
+            if (_users.Any(u => u.Username == user.Username)) return false;
 
-            // Add the new user to the list and save the updated list to the file.
-            _users.Add(new User { Username = user.Username, Password = user.Password });
+            // Set a new Guid for the UserID
+            user.UserID = Guid.NewGuid();
+
+            _users.Add(new User 
+            { 
+                UserID = user.UserID,
+                Username = user.Username, 
+                Password = user.Password});
             SaveUsers(_users);
             return true;
         }

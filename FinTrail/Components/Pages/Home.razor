@@ -51,6 +51,17 @@
             .login-container button:hover {
                 background-color: #473cb3;
             }
+
+        .login-container span {
+            display: block;
+            margin-top: 10px;
+            color: #5a4fcf;
+            cursor: pointer;
+        }
+
+            .login-container span:hover {
+                text-decoration: underline;
+            }
 </style>
 
 <div class="login-container">
@@ -71,6 +82,7 @@
     {
         <p style="color:red;">@ErrorMessage</p>
     }
+    <span @onclick="GoToRegisterPage">Do you have an Account?</span>
 </div>
 
 @code {
@@ -84,7 +96,7 @@
         try
         {
             // Prevent default form submission
-            var user = new User { Username = Username, Password = Password };
+            var user = new User { Username = Username, Password = Password, SelectedCurrency = SelectedCurrency };
 
             // Validate the user credentials using the UserService
             if (UserService.Login(user))
@@ -104,4 +116,9 @@
         }
     }
 
+    private void GoToRegisterPage()
+    {
+        // Redirect to the register page
+        Nav.NavigateTo("/register");
+    }
 }

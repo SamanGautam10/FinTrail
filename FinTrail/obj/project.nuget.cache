@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HK4SOp8Z3PA=",
+  "dgSpecHash": "3Ho4kVSIXrI=",
   "success": true,
   "projectFilePath": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\FinTrail.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,8 @@
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.aspnetcore.components.web\\8.0.10\\microsoft.aspnetcore.components.web.8.0.10.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\8.0.10\\microsoft.aspnetcore.components.webview.8.0.10.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.aspnetcore.components.webview.maui\\8.0.83\\microsoft.aspnetcore.components.webview.maui.8.0.83.nupkg.sha512",
+    "C:\\Users\\Saman\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\9.0.0\\microsoft.aspnetcore.cryptography.internal.9.0.0.nupkg.sha512",
+    "C:\\Users\\Saman\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\9.0.0\\microsoft.aspnetcore.cryptography.keyderivation.9.0.0.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.10\\microsoft.aspnetcore.metadata.8.0.10.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
@@ -133,15 +135,15 @@
     "C:\\Users\\Saman\\.nuget\\packages\\xamarin.kotlin.stdlib.jdk8\\1.9.0.1\\xamarin.kotlin.stdlib.jdk8.1.9.0.1.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\xamarin.kotlinx.coroutines.android\\1.7.2.1\\xamarin.kotlinx.coroutines.android.1.7.2.1.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.7.2.1\\xamarin.kotlinx.coroutines.core.jvm.1.7.2.1.nupkg.sha512",
-    "C:\\Users\\Saman\\.nuget\\packages\\microsoft.android.runtime.34.android-x64\\34.0.145\\microsoft.android.runtime.34.android-x64.34.0.145.nupkg.sha512",
-    "C:\\Users\\Saman\\.nuget\\packages\\microsoft.android.runtime.34.android-arm64\\34.0.145\\microsoft.android.runtime.34.android-arm64.34.0.145.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.android.ref.34\\34.0.145\\microsoft.android.ref.34.34.0.145.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.android.runtime.34.android-arm\\34.0.145\\microsoft.android.runtime.34.android-arm.34.0.145.nupkg.sha512",
+    "C:\\Users\\Saman\\.nuget\\packages\\microsoft.android.runtime.34.android-arm64\\34.0.145\\microsoft.android.runtime.34.android-arm64.34.0.145.nupkg.sha512",
+    "C:\\Users\\Saman\\.nuget\\packages\\microsoft.android.runtime.34.android-x64\\34.0.145\\microsoft.android.runtime.34.android-x64.34.0.145.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.android.runtime.34.android-x86\\34.0.145\\microsoft.android.runtime.34.android-x86.34.0.145.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.ios.ref.net8.0_18.0\\18.0.8316\\microsoft.ios.ref.net8.0_18.0.18.0.8316.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.ios.runtime.iossimulator-x64.net8.0_18.0\\18.0.8316\\microsoft.ios.runtime.iossimulator-x64.net8.0_18.0.18.0.8316.nupkg.sha512",
-    "C:\\Users\\Saman\\.nuget\\packages\\microsoft.maccatalyst.runtime.maccatalyst-x64.net8.0_18.0\\18.0.8316\\microsoft.maccatalyst.runtime.maccatalyst-x64.net8.0_18.0.18.0.8316.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.maccatalyst.ref.net8.0_18.0\\18.0.8316\\microsoft.maccatalyst.ref.net8.0_18.0.18.0.8316.nupkg.sha512",
+    "C:\\Users\\Saman\\.nuget\\packages\\microsoft.maccatalyst.runtime.maccatalyst-x64.net8.0_18.0\\18.0.8316\\microsoft.maccatalyst.runtime.maccatalyst-x64.net8.0_18.0.18.0.8316.nupkg.sha512",
     "C:\\Users\\Saman\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.54\\microsoft.windows.sdk.net.ref.10.0.19041.54.nupkg.sha512"
   ],
   "logs": []

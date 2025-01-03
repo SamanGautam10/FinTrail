@@ -11,5 +11,7 @@ namespace FinTrail.Base
         NPR = 1,
         INR = 2,
         USD = 3,
+        GBP = 4,
+        EUR = 5,
     }
 }

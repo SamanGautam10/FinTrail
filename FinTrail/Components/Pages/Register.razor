@@ -1,0 +1,135 @@
+﻿@page "/register"
+
+@using FinTrail.Model
+@using FinTrail.Services
+@using FinTrail.Services.Interface
+@inject NavigationManager Nav
+@inject IUserInterface UserService
+
+@using System.Security.Cryptography;
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('/images/login-bg.jpg');
+        background-size: cover;
+        font-family: Arial, sans-serif;
+    }
+
+    .login-container {
+        background-color: rgba(239,238,239,255);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        text-align: center;
+    }
+
+    .login-container h2 {
+        margin-bottom: 20px;
+    }
+
+    .login-container input,
+    .login-container select,
+    .login-container button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+    .login-container button {
+        background-color: #5a4fcf;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .login-container button:hover {
+        background-color: #473cb3;
+    }
+
+    .login-container span {
+        display: block;
+        margin-top: 10px;
+        color: #5a4fcf;
+        cursor: pointer;
+    }
+
+    .login-container span:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="login-container">
+    <h2>Register</h2>
+    <form @onsubmit="HandleRegister">
+        <input type="text" placeholder="Username" @bind="Username" required />
+        <input type="password" placeholder="Password" @bind="Password" required />
+        <input type="password" placeholder="Confirm Password" @bind="ConfirmPassword" required />
+        <select @bind="SelectedCurrency" required>
+            <option value="" disabled selected>Select Currency</option>
+            <option value="NPR">NPR</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="USD">USD</option>
+        </select>
+        <button type="submit">Register</button>
+    </form>
+    @if (ErrorMessage != null)
+    {
+        <p style="color:red;">@ErrorMessage</p>
+    }
+    <span @onclick="GoToLoginPage">Already have an Account?</span>
+</div>
+
+@code {
+    private string Username { get; set; }
+    private string Password { get; set; }
+    private string ConfirmPassword { get; set; }
+    private string SelectedCurrency { get; set; }
+    private string ErrorMessage { get; set; }
+
+    private async Task HandleRegister()
+    {
+        try
+        {
+            // Validate the passwords
+            if (Password != ConfirmPassword)
+            {
+                ErrorMessage = "Passwords do not match. Please try again.";
+                return;
+            }
+
+            // Create a new User object
+            var newUser = new User { Username = Username, Password = Password, SelectedCurrency = SelectedCurrency };
+
+            // Call the Register method from UserService
+            if (UserService.Register(newUser))
+            {
+                // Redirect to the login page after successful registration
+                Nav.NavigateTo("/");
+            }
+            else
+            {
+                ErrorMessage = "Username already exists. Please choose a different username.";
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+
+    private void GoToLoginPage()
+    {
+        // Redirect to the login page
+        Nav.NavigateTo("/");
+    }
+}
