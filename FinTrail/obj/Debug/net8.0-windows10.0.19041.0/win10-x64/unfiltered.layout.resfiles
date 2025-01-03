@@ -1,5 +1,6 @@
+wwwroot\_content\MudBlazor\MudBlazor.min.css
+wwwroot\_content\MudBlazor\MudBlazor.min.js
 Components\Layout\MainLayout.razor.css
-Components\Layout\NavMenu.razor.css
 OpenSans-Regular.ttf
 appicon.ico
 appiconLargeTile.scale-100.png
@@ -58,10 +59,12 @@ splashSplashScreen.scale-150.png
 splashSplashScreen.scale-200.png
 splashSplashScreen.scale-400.png
 wwwroot\FinTrail.styles.css
-wwwroot\FinTrail.t780dsswqc.bundle.scp.css
+wwwroot\FinTrail.es0ocft13i.bundle.scp.css
 AboutAssets.txt
 wwwroot\css\app.css
 wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\css\bootstrap\bootstrap.min.css.map
 wwwroot\favicon.png
+wwwroot\images\fintrail.jpeg
+wwwroot\images\login-bg.jpg
 wwwroot\index.html

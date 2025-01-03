@@ -97,7 +97,6 @@ E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTr
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\WinRT.Runtime.dll
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinTrail.csproj.AssemblyReference.cache
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
-E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\FinTrail.styles.css
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\FinTrail.bundle.scp.css
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.build.json
@@ -210,3 +209,7 @@ E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTr
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Localization.dll
+E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Localization.Abstractions.dll
+E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MudBlazor.dll
+E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinTrail.sourcelink.json

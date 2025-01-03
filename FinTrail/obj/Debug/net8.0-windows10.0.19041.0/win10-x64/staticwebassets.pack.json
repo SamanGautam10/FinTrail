@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\fintrail.jpeg",
+      "PackagePath": "staticwebassets\\images\\fintrail.jpeg"
+    },
+    {
+      "Id": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\login-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\login-bg.jpg"
+    },
+    {
       "Id": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "n7SfQgBTYtA7n8xgCfDY03uuOFde5+4cnGSzp6jkbKc=",
+  "Hash": "SdKsflK9iv0CyPURUpy0gisn+BxiiKImhcayNXrW68Y=",
   "Source": "FinTrail",
   "BasePath": "/",
   "Mode": "Root",
@@ -17,6 +17,48 @@
   ],
   "Assets": [
     {
+      "Identity": "C:\\Users\\Saman\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Saman\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mhumzvqd1g",
+      "Integrity": "2gItJ0j/o5RSWg7VYqCOBpSPI1dxTOG+mnEzWt7EvYw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Saman\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Saman\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Saman\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rnojub5shy",
+      "Integrity": "lz0Xidl9yw53lEeYs4XMU39zSRQzpCIyWOQSAG0/0GU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Saman\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\MudBlazor.min.js"
+    },
+    {
       "Identity": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\FinTrail.styles.css",
       "SourceId": "FinTrail",
       "SourceType": "Computed",
@@ -31,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "t780dsswqc",
-      "Integrity": "mQbv9HCLjeZ/jOi6GD9MOcE5RDZZ19RqfGd2bjQNkto=",
+      "Fingerprint": "es0ocft13i",
+      "Integrity": "/lFSKxHdJ+VQk1APSdqiUBIOKU7HKvRh3BDOh3QPVwc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\FinTrail.styles.css"
@@ -52,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "t780dsswqc",
-      "Integrity": "mQbv9HCLjeZ/jOi6GD9MOcE5RDZZ19RqfGd2bjQNkto=",
+      "Fingerprint": "es0ocft13i",
+      "Integrity": "/lFSKxHdJ+VQk1APSdqiUBIOKU7HKvRh3BDOh3QPVwc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\FinTrail.bundle.scp.css"
@@ -143,6 +185,48 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
+      "Identity": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\fintrail.jpeg",
+      "SourceId": "FinTrail",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/fintrail#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2gfpdqipyq",
+      "Integrity": "ck9B+oMf7aYzfcYrRdCNHPfeE/j2HAWTB9+w4yHaivg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fintrail.jpeg"
+    },
+    {
+      "Identity": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\login-bg.jpg",
+      "SourceId": "FinTrail",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/login-bg#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "04a36u5cef",
+      "Integrity": "8KNriCJv0cVCiybE4xKORJi1CuEG5+DLQ2ToLO5kR9M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\login-bg.jpg"
+    },
+    {
       "Identity": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\index.html",
       "SourceId": "FinTrail",
       "SourceType": "Discovered",
@@ -157,14 +241,88 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "84kf0feig7",
-      "Integrity": "mA9aTf8CPr4mi51D7kDid8wOA5uMvVDSHpDd0pIK2oo=",
+      "Fingerprint": "gb1to4zum8",
+      "Integrity": "FPwo9gviQVHQTT+8Du82AnNIUh99Yt8KbYXqXIY5wlU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
     }
   ],
   "Endpoints": [
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.css",
+      "AssetFile": "C:\\Users\\Saman\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\MudBlazor.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "580975"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2gItJ0j/o5RSWg7VYqCOBpSPI1dxTOG+mnEzWt7EvYw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Oct 2024 20:30:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2gItJ0j/o5RSWg7VYqCOBpSPI1dxTOG+mnEzWt7EvYw="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.js",
+      "AssetFile": "C:\\Users\\Saman\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\MudBlazor.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49823"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lz0Xidl9yw53lEeYs4XMU39zSRQzpCIyWOQSAG0/0GU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Oct 2024 20:30:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lz0Xidl9yw53lEeYs4XMU39zSRQzpCIyWOQSAG0/0GU="
+        }
+      ]
+    },
     {
       "Route": "css/app.css",
       "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\css\\app.css",
@@ -188,7 +346,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:02 GMT"
+          "Value": "Wed, 18 Dec 2024 15:11:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -225,7 +383,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:02 GMT"
+          "Value": "Wed, 18 Dec 2024 15:11:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -270,7 +428,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:02 GMT"
+          "Value": "Wed, 18 Dec 2024 15:11:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -315,7 +473,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:02 GMT"
+          "Value": "Wed, 18 Dec 2024 15:11:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -352,7 +510,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:02 GMT"
+          "Value": "Wed, 18 Dec 2024 15:11:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -397,7 +555,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:02 GMT"
+          "Value": "Wed, 18 Dec 2024 15:11:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -434,7 +592,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:02 GMT"
+          "Value": "Wed, 18 Dec 2024 15:11:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -479,7 +637,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:02 GMT"
+          "Value": "Wed, 18 Dec 2024 15:11:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -504,7 +662,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5481"
+          "Value": "1796"
         },
         {
           "Name": "Content-Type",
@@ -512,11 +670,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mQbv9HCLjeZ/jOi6GD9MOcE5RDZZ19RqfGd2bjQNkto=\""
+          "Value": "\"/lFSKxHdJ+VQk1APSdqiUBIOKU7HKvRh3BDOh3QPVwc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:25 GMT"
+          "Value": "Wed, 01 Jan 2025 14:45:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -526,7 +684,97 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mQbv9HCLjeZ/jOi6GD9MOcE5RDZZ19RqfGd2bjQNkto="
+          "Value": "sha256-/lFSKxHdJ+VQk1APSdqiUBIOKU7HKvRh3BDOh3QPVwc="
+        }
+      ]
+    },
+    {
+      "Route": "FinTrail.es0ocft13i.bundle.scp.css",
+      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\FinTrail.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1796"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/lFSKxHdJ+VQk1APSdqiUBIOKU7HKvRh3BDOh3QPVwc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 01 Jan 2025 14:45:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "es0ocft13i"
+        },
+        {
+          "Name": "label",
+          "Value": "FinTrail.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/lFSKxHdJ+VQk1APSdqiUBIOKU7HKvRh3BDOh3QPVwc="
+        }
+      ]
+    },
+    {
+      "Route": "FinTrail.es0ocft13i.styles.css",
+      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\FinTrail.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1796"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/lFSKxHdJ+VQk1APSdqiUBIOKU7HKvRh3BDOh3QPVwc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 01 Jan 2025 14:45:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "es0ocft13i"
+        },
+        {
+          "Name": "label",
+          "Value": "FinTrail.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/lFSKxHdJ+VQk1APSdqiUBIOKU7HKvRh3BDOh3QPVwc="
         }
       ]
     },
@@ -541,7 +789,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5481"
+          "Value": "1796"
         },
         {
           "Name": "Content-Type",
@@ -549,11 +797,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mQbv9HCLjeZ/jOi6GD9MOcE5RDZZ19RqfGd2bjQNkto=\""
+          "Value": "\"/lFSKxHdJ+VQk1APSdqiUBIOKU7HKvRh3BDOh3QPVwc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:25 GMT"
+          "Value": "Wed, 01 Jan 2025 14:45:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -563,13 +811,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mQbv9HCLjeZ/jOi6GD9MOcE5RDZZ19RqfGd2bjQNkto="
+          "Value": "sha256-/lFSKxHdJ+VQk1APSdqiUBIOKU7HKvRh3BDOh3QPVwc="
         }
       ]
     },
     {
-      "Route": "FinTrail.t780dsswqc.bundle.scp.css",
-      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\FinTrail.bundle.scp.css",
+      "Route": "images/fintrail.2gfpdqipyq.jpeg",
+      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\fintrail.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -578,19 +826,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5481"
+          "Value": "151999"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/css"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"mQbv9HCLjeZ/jOi6GD9MOcE5RDZZ19RqfGd2bjQNkto=\""
+          "Value": "\"ck9B+oMf7aYzfcYrRdCNHPfeE/j2HAWTB9+w4yHaivg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:25 GMT"
+          "Value": "Wed, 01 Jan 2025 13:45:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -600,21 +848,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "t780dsswqc"
+          "Value": "2gfpdqipyq"
         },
         {
           "Name": "label",
-          "Value": "FinTrail.bundle.scp.css"
+          "Value": "images/fintrail.jpeg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mQbv9HCLjeZ/jOi6GD9MOcE5RDZZ19RqfGd2bjQNkto="
+          "Value": "sha256-ck9B+oMf7aYzfcYrRdCNHPfeE/j2HAWTB9+w4yHaivg="
         }
       ]
     },
     {
-      "Route": "FinTrail.t780dsswqc.styles.css",
-      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\FinTrail.styles.css",
+      "Route": "images/fintrail.jpeg",
+      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\fintrail.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -623,19 +871,56 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5481"
+          "Value": "151999"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/css"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"mQbv9HCLjeZ/jOi6GD9MOcE5RDZZ19RqfGd2bjQNkto=\""
+          "Value": "\"ck9B+oMf7aYzfcYrRdCNHPfeE/j2HAWTB9+w4yHaivg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:25 GMT"
+          "Value": "Wed, 01 Jan 2025 13:45:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ck9B+oMf7aYzfcYrRdCNHPfeE/j2HAWTB9+w4yHaivg="
+        }
+      ]
+    },
+    {
+      "Route": "images/login-bg.04a36u5cef.jpg",
+      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\login-bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "384312"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8KNriCJv0cVCiybE4xKORJi1CuEG5+DLQ2ToLO5kR9M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 01 Jan 2025 13:45:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -645,20 +930,57 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "t780dsswqc"
+          "Value": "04a36u5cef"
         },
         {
           "Name": "label",
-          "Value": "FinTrail.styles.css"
+          "Value": "images/login-bg.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mQbv9HCLjeZ/jOi6GD9MOcE5RDZZ19RqfGd2bjQNkto="
+          "Value": "sha256-8KNriCJv0cVCiybE4xKORJi1CuEG5+DLQ2ToLO5kR9M="
         }
       ]
     },
     {
-      "Route": "index.84kf0feig7.html",
+      "Route": "images/login-bg.jpg",
+      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\login-bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "384312"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8KNriCJv0cVCiybE4xKORJi1CuEG5+DLQ2ToLO5kR9M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 01 Jan 2025 13:45:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8KNriCJv0cVCiybE4xKORJi1CuEG5+DLQ2ToLO5kR9M="
+        }
+      ]
+    },
+    {
+      "Route": "index.gb1to4zum8.html",
       "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -668,7 +990,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "873"
+          "Value": "1127"
         },
         {
           "Name": "Content-Type",
@@ -676,11 +998,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mA9aTf8CPr4mi51D7kDid8wOA5uMvVDSHpDd0pIK2oo=\""
+          "Value": "\"FPwo9gviQVHQTT+8Du82AnNIUh99Yt8KbYXqXIY5wlU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:02 GMT"
+          "Value": "Sun, 29 Dec 2024 03:54:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -690,7 +1012,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "84kf0feig7"
+          "Value": "gb1to4zum8"
         },
         {
           "Name": "label",
@@ -698,7 +1020,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mA9aTf8CPr4mi51D7kDid8wOA5uMvVDSHpDd0pIK2oo="
+          "Value": "sha256-FPwo9gviQVHQTT+8Du82AnNIUh99Yt8KbYXqXIY5wlU="
         }
       ]
     },
@@ -713,7 +1035,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "873"
+          "Value": "1127"
         },
         {
           "Name": "Content-Type",
@@ -721,11 +1043,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mA9aTf8CPr4mi51D7kDid8wOA5uMvVDSHpDd0pIK2oo=\""
+          "Value": "\"FPwo9gviQVHQTT+8Du82AnNIUh99Yt8KbYXqXIY5wlU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:03:02 GMT"
+          "Value": "Sun, 29 Dec 2024 03:54:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -735,7 +1057,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mA9aTf8CPr4mi51D7kDid8wOA5uMvVDSHpDd0pIK2oo="
+          "Value": "sha256-FPwo9gviQVHQTT+8Du82AnNIUh99Yt8KbYXqXIY5wlU="
         }
       ]
     }

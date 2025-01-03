@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using FinTrail.Services;
+using FinTrail.Services.Interface;
+using Microsoft.Extensions.Logging;
+using MudBlazor.Services;
 
 namespace FinTrail
 {
@@ -19,6 +22,8 @@ namespace FinTrail
 #if DEBUG
     		builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
+            builder.Services.AddMudServices();
+            builder.Services.AddScoped<IUserInterface, UserService>();
 #endif
 
             return builder.Build();

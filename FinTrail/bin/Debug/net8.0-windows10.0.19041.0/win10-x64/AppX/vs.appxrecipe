@@ -29,281 +29,289 @@
     <AppXManifest Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-18T15:03:58.296</Modified>
+      <Modified>2025-01-03T12:14:47.184</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-18T15:03:58.112</Modified>
+      <Modified>2025-01-03T11:46:27.691</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FinTrail.runtimeconfig.json">
       <PackagePath>FinTrail.runtimeconfig.json</PackagePath>
-      <Modified>2024-12-18T15:03:57.910</Modified>
+      <Modified>2025-01-01T13:52:13.847</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FinTrail.dll">
       <PackagePath>FinTrail.dll</PackagePath>
-      <Modified>2024-12-18T15:03:57.070</Modified>
+      <Modified>2025-01-03T12:14:46.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>FinTrail.exe</PackagePath>
-      <Modified>2024-12-18T15:03:57.083</Modified>
+      <Modified>2025-01-03T12:14:46.906</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
-      <Modified>2024-12-18T15:03:02.791</Modified>
+      <Modified>2024-12-18T15:11:30.536</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
-      <Modified>2024-12-18T15:03:02.795</Modified>
+      <Modified>2024-12-18T15:11:32.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\css\bootstrap\bootstrap.min.css">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css</PackagePath>
-      <Modified>2024-12-18T15:03:02.796</Modified>
+      <Modified>2024-12-18T15:11:32.658</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\css\bootstrap\bootstrap.min.css.map">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css.map</PackagePath>
-      <Modified>2024-12-18T15:03:02.797</Modified>
+      <Modified>2024-12-18T15:11:32.660</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\favicon.png">
       <PackagePath>wwwroot\favicon.png</PackagePath>
-      <Modified>2024-12-18T15:03:02.793</Modified>
+      <Modified>2024-12-18T15:11:32.660</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\images\fintrail.jpeg">
+      <PackagePath>wwwroot\images\fintrail.jpeg</PackagePath>
+      <Modified>2025-01-01T13:45:52.777</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\images\login-bg.jpg">
+      <PackagePath>wwwroot\images\login-bg.jpg</PackagePath>
+      <Modified>2025-01-01T13:45:32.785</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
-      <Modified>2024-12-18T15:03:02.794</Modified>
+      <Modified>2024-12-29T03:54:51.507</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-12-18T15:03:26.657</Modified>
+      <Modified>2024-12-18T15:11:32.638</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-12-18T15:03:26.672</Modified>
+      <Modified>2024-12-18T15:11:32.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-12-18T15:03:26.692</Modified>
+      <Modified>2024-12-18T15:11:32.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-12-18T15:03:26.723</Modified>
+      <Modified>2024-12-18T15:11:32.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-12-18T15:03:26.845</Modified>
+      <Modified>2024-12-18T15:11:32.640</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2024-12-18T15:03:02.788</Modified>
+      <Modified>2024-12-18T15:11:32.619</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-12-18T15:03:28.046</Modified>
+      <Modified>2024-12-18T15:11:32.620</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.040</Modified>
+      <Modified>2024-12-18T15:11:32.620</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.040</Modified>
+      <Modified>2024-12-18T15:11:32.620</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.040</Modified>
+      <Modified>2024-12-18T15:11:32.621</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.040</Modified>
+      <Modified>2024-12-18T15:11:32.621</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.039</Modified>
+      <Modified>2024-12-18T15:11:32.622</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.044</Modified>
+      <Modified>2024-12-18T15:11:32.622</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.044</Modified>
+      <Modified>2024-12-18T15:11:32.622</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.043</Modified>
+      <Modified>2024-12-18T15:11:32.623</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.044</Modified>
+      <Modified>2024-12-18T15:11:32.623</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.044</Modified>
+      <Modified>2024-12-18T15:11:32.623</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.045</Modified>
+      <Modified>2024-12-18T15:11:32.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.045</Modified>
+      <Modified>2024-12-18T15:11:32.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.044</Modified>
+      <Modified>2024-12-18T15:11:32.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.045</Modified>
+      <Modified>2024-12-18T15:11:32.625</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.044</Modified>
+      <Modified>2024-12-18T15:11:32.625</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.046</Modified>
+      <Modified>2024-12-18T15:11:32.625</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.046</Modified>
+      <Modified>2024-12-18T15:11:32.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.046</Modified>
+      <Modified>2024-12-18T15:11:32.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.046</Modified>
+      <Modified>2024-12-18T15:11:32.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.046</Modified>
+      <Modified>2024-12-18T15:11:32.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.046</Modified>
+      <Modified>2024-12-18T15:11:32.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.045</Modified>
+      <Modified>2024-12-18T15:11:32.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.045</Modified>
+      <Modified>2024-12-18T15:11:32.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.045</Modified>
+      <Modified>2024-12-18T15:11:32.628</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.045</Modified>
+      <Modified>2024-12-18T15:11:32.628</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.042</Modified>
+      <Modified>2024-12-18T15:11:32.628</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.042</Modified>
+      <Modified>2024-12-18T15:11:32.629</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.042</Modified>
+      <Modified>2024-12-18T15:11:32.629</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.042</Modified>
+      <Modified>2024-12-18T15:11:32.629</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.041</Modified>
+      <Modified>2024-12-18T15:11:32.630</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.043</Modified>
+      <Modified>2024-12-18T15:11:32.630</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.043</Modified>
+      <Modified>2024-12-18T15:11:32.631</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.042</Modified>
+      <Modified>2024-12-18T15:11:32.631</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.042</Modified>
+      <Modified>2024-12-18T15:11:32.631</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.042</Modified>
+      <Modified>2024-12-18T15:11:32.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.043</Modified>
+      <Modified>2024-12-18T15:11:32.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.043</Modified>
+      <Modified>2024-12-18T15:11:32.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.043</Modified>
+      <Modified>2024-12-18T15:11:32.633</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.043</Modified>
+      <Modified>2024-12-18T15:11:32.633</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.043</Modified>
+      <Modified>2024-12-18T15:11:32.633</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.041</Modified>
+      <Modified>2024-12-18T15:11:32.634</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.041</Modified>
+      <Modified>2024-12-18T15:11:32.634</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.041</Modified>
+      <Modified>2024-12-18T15:11:32.635</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.041</Modified>
+      <Modified>2024-12-18T15:11:32.635</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.040</Modified>
+      <Modified>2024-12-18T15:11:32.635</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.047</Modified>
+      <Modified>2024-12-18T15:11:32.636</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.047</Modified>
+      <Modified>2024-12-18T15:11:32.636</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.047</Modified>
+      <Modified>2024-12-18T15:11:32.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.047</Modified>
+      <Modified>2024-12-18T15:11:32.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-12-18T15:03:28.047</Modified>
+      <Modified>2024-12-18T15:11:32.638</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FinTrail.deps.json">
       <PackagePath>FinTrail.deps.json</PackagePath>
-      <Modified>2024-12-18T15:03:57.781</Modified>
+      <Modified>2025-01-03T11:46:27.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.54\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -388,6 +396,14 @@
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.extensions.filesystemglobbing\8.0.0\lib\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll">
       <PackagePath>Microsoft.Extensions.FileSystemGlobbing.dll</PackagePath>
       <Modified>2023-10-31T14:58:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.extensions.localization\8.0.8\lib\net8.0\Microsoft.Extensions.Localization.dll">
+      <PackagePath>Microsoft.Extensions.Localization.dll</PackagePath>
+      <Modified>2024-07-19T22:51:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.extensions.localization.abstractions\8.0.8\lib\net8.0\Microsoft.Extensions.Localization.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.Localization.Abstractions.dll</PackagePath>
+      <Modified>2024-07-19T22:51:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.extensions.logging\8.0.1\lib\net8.0\Microsoft.Extensions.Logging.dll">
       <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
@@ -508,6 +524,10 @@
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.windowsappsdk\1.5.240627000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
       <Modified>2024-06-26T19:15:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\mudblazor\7.15.0\lib\net8.0\MudBlazor.dll">
+      <PackagePath>MudBlazor.dll</PackagePath>
+      <Modified>2024-10-29T20:30:44.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\system.io.pipelines\8.0.0\lib\net8.0\System.IO.Pipelines.dll">
       <PackagePath>System.IO.Pipelines.dll</PackagePath>
@@ -659,7 +679,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.build.endpoints.json">
       <PackagePath>FinTrail.staticwebassets.endpoints.json</PackagePath>
-      <Modified>2024-12-18T15:03:25.359</Modified>
+      <Modified>2025-01-01T14:45:53.719</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.maui.controls.compatibility\8.0.83\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -673,21 +693,25 @@
       <PackagePath>Microsoft.Maui.pri</PackagePath>
       <Modified>2024-10-29T21:54:22.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\mudblazor\7.15.0\staticwebassets\MudBlazor.min.css">
+      <PackagePath>wwwroot\_content\MudBlazor\MudBlazor.min.css</PackagePath>
+      <Modified>2024-10-29T20:30:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\mudblazor\7.15.0\staticwebassets\MudBlazor.min.js">
+      <PackagePath>wwwroot\_content\MudBlazor\MudBlazor.min.js</PackagePath>
+      <Modified>2024-10-29T20:30:12.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\FinTrail.styles.css">
       <PackagePath>wwwroot\FinTrail.styles.css</PackagePath>
-      <Modified>2024-12-18T15:03:25.348</Modified>
+      <Modified>2025-01-01T14:45:53.547</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\FinTrail.bundle.scp.css">
-      <PackagePath>wwwroot\FinTrail.t780dsswqc.bundle.scp.css</PackagePath>
-      <Modified>2024-12-18T15:03:25.349</Modified>
+      <PackagePath>wwwroot\FinTrail.es0ocft13i.bundle.scp.css</PackagePath>
+      <Modified>2025-01-01T14:45:53.580</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\Components\Layout\MainLayout.razor.css">
       <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>
-      <Modified>2024-12-18T15:03:02.801</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\Components\Layout\NavMenu.razor.css">
-      <PackagePath>Components\Layout\NavMenu.razor.css</PackagePath>
-      <Modified>2024-12-18T15:03:02.803</Modified>
+      <Modified>2024-12-18T15:11:30.522</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

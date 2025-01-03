@@ -1,0 +1,53 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Build results
+bin/
+obj/
+
+# Visual Studio working directory
+.vs/
+.vscode/
+
+# Rider working directory
+.idea/
+*.sln.iml
+
+# MacOS Files
+*.DS_Store
+
+# MAUI Specific Directories
+AppPackages/
+bin/
+obj/
+platforms/
+
+# Log files
+*.log
+
+# Crash dumps
+*.dmp
+*.stackdump
+*.pid.lock
+
+# Application insights
+ApplicationInsights.config
+ApplicationInsightsTelemetry.config
+
+# Package directories
+node_modules/
+bower_components/
+
+# JetBrains Rider
+.idea/
+*.sln.iml

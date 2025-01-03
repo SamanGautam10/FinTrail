@@ -2,4 +2,6 @@ wwwroot\css\app.css
 wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\css\bootstrap\bootstrap.min.css.map
 wwwroot\favicon.png
+wwwroot\images\fintrail.jpeg
+wwwroot\images\login-bg.jpg
 wwwroot\index.html

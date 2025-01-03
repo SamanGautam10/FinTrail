@@ -52,6 +52,12 @@
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\favicon.png">
       <PackagePath>wwwroot\favicon.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\images\fintrail.jpeg">
+      <PackagePath>wwwroot\images\fintrail.jpeg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\images\login-bg.jpg">
+      <PackagePath>wwwroot\images\login-bg.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
     </AppxPackagedFile>
@@ -292,6 +298,12 @@
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.extensions.filesystemglobbing\8.0.0\lib\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll">
       <PackagePath>Microsoft.Extensions.FileSystemGlobbing.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.extensions.localization\8.0.8\lib\net8.0\Microsoft.Extensions.Localization.dll">
+      <PackagePath>Microsoft.Extensions.Localization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.extensions.localization.abstractions\8.0.8\lib\net8.0\Microsoft.Extensions.Localization.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.Localization.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.extensions.logging\8.0.1\lib\net8.0\Microsoft.Extensions.Logging.dll">
       <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
     </AppxPackagedFile>
@@ -381,6 +393,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.windowsappsdk\1.5.240627000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\mudblazor\7.15.0\lib\net8.0\MudBlazor.dll">
+      <PackagePath>MudBlazor.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\system.io.pipelines\8.0.0\lib\net8.0\System.IO.Pipelines.dll">
       <PackagePath>System.IO.Pipelines.dll</PackagePath>
@@ -505,17 +520,20 @@
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.maui.core\8.0.83\lib\net8.0-windows10.0.19041\Microsoft.Maui.pri">
       <PackagePath>Microsoft.Maui.pri</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\mudblazor\7.15.0\staticwebassets\MudBlazor.min.css">
+      <PackagePath>wwwroot\_content\MudBlazor\MudBlazor.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\mudblazor\7.15.0\staticwebassets\MudBlazor.min.js">
+      <PackagePath>wwwroot\_content\MudBlazor\MudBlazor.min.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\FinTrail.styles.css">
       <PackagePath>wwwroot\FinTrail.styles.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\FinTrail.bundle.scp.css">
-      <PackagePath>wwwroot\FinTrail.t780dsswqc.bundle.scp.css</PackagePath>
+      <PackagePath>wwwroot\FinTrail.es0ocft13i.bundle.scp.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\Components\Layout\MainLayout.razor.css">
       <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\Components\Layout\NavMenu.razor.css">
-      <PackagePath>Components\Layout\NavMenu.razor.css</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,107 @@
 ﻿@page "/"
+@using FinTrail.Model
+@using FinTrail.Services;
+@using FinTrail.Services.Interface;
+@inject NavigationManager Nav
+@inject IUserInterface UserService
 
-<h1>Hello, world!</h1>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('/images/login-bg.jpg');
+        background-size: cover;
+        font-family: Arial, sans-serif;
+    }
 
-Welcome to your new app.
+    .login-container {
+        background-color: rgba(239,238,239,255);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        text-align: center;
+    }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-container input,
+        .login-container select,
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .login-container button {
+            background-color: #5a4fcf;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+            .login-container button:hover {
+                background-color: #473cb3;
+            }
+</style>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form @onsubmit="HandleLogin">
+        <input type="text" placeholder="Username" @bind="Username" required />
+        <input type="password" placeholder="Password" @bind="Password" required />
+        <select @bind="SelectedCurrency" required>
+            <option value="" disabled selected>Select Currency</option>
+            <option value="NPR">NPR</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="USD">USD</option>
+        </select>
+        <button type="submit">Login</button>
+    </form>
+    @if (ErrorMessage != null)
+    {
+        <p style="color:red;">@ErrorMessage</p>
+    }
+</div>
+
+@code {
+    private string Username { get; set; }
+    private string Password { get; set; }
+    private string SelectedCurrency { get; set; }
+    private string ErrorMessage { get; set; }
+
+    private async Task HandleLogin()
+    {
+        try
+        {
+            // Prevent default form submission
+            var user = new User { Username = Username, Password = Password };
+
+            // Validate the user credentials using the UserService
+            if (UserService.Login(user))
+            {
+                // Navigate to another page or perform actions on successful login
+                Nav.NavigateTo("/dashboard");
+            }
+            else
+            {
+                // Display an error message on failed login
+                ErrorMessage = "Invalid username or password. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+
+}
