@@ -9,5 +9,6 @@ namespace FinTrail.Model
         public required string Username { get; set; } 
         public required string Password { get; set; }
         public string SelectedCurrency { get; set; }
+        public string Salt { get; set; }
     }
 }

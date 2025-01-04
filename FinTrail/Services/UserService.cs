@@ -1,6 +1,11 @@
 ﻿using FinTrail.Abstraction;
 using FinTrail.Model;
 using FinTrail.Services.Interface;
+using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace FinTrail.Services
 {
@@ -40,20 +45,37 @@ namespace FinTrail.Services
                 return false; // Invalid input
             }
 
-            // Check if the username and password match any user in the list (loaded from users.json)
-            var existingUser = _users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password);
+            // Find the existing user by username
+            var existingUser = _users.FirstOrDefault(u => u.Username == user.Username);
 
-            if (existingUser != null)
+            if (existingUser == null)
+            {
+                return false; // No such user found
+            }
+
+            // Convert the stored salt from Base64 to byte array
+            byte[] salt = Convert.FromBase64String(existingUser.Salt);
+
+            // Hash the entered password with the stored salt using PBKDF2
+            string hashedPassword = Convert.ToBase64String(KeyDerivation.Pbkdf2(
+                password: user.Password,
+                salt: salt,
+                prf: KeyDerivationPrf.HMACSHA256,
+                iterationCount: 10000,
+                numBytesRequested: 256 / 8));
+
+            // Compare the hashed password with the stored hash
+            if (hashedPassword == existingUser.Password)
             {
                 _loggedInUser = existingUser; // Set the logged-in user
 
-                // Login successful then update the currency field
+                // Update the currency field (if necessary)
                 existingUser.SelectedCurrency = user.SelectedCurrency;
 
-                // Save the updated users list back to the JSON file
+                // Save the updated user list back to the JSON file
                 SaveUsers(_users);
 
-                return true;
+                return true; // Login successful
             }
 
             return false; // Login failed: invalid username or password
@@ -62,17 +84,27 @@ namespace FinTrail.Services
         // Register method remains the same
         public bool Register(User user)
         {
-            //checking if username already exists
-            if (_users.Any(u => u.Username == user.Username)) return false;
+            // Generate a salt for the password
+            byte[] salt = new byte[128 / 8]; // 128-bit salt
+            using (var rng = new System.Security.Cryptography.RNGCryptoServiceProvider())
+            {
+                rng.GetBytes(salt); // Generate random bytes for the salt
+            }
 
-            // Set a new Guid for the UserID
-            user.UserID = Guid.NewGuid();
+            // Hash the password with the salt using PBKDF2
+            string hashedPassword = Convert.ToBase64String(KeyDerivation.Pbkdf2(
+                password: user.Password,
+                salt: salt,
+                prf: KeyDerivationPrf.HMACSHA256,
+                iterationCount: 10000, // Perform 10,000 iterations
+                numBytesRequested: 256 / 8)); // Request 256 bits (32 bytes) hash
 
-            _users.Add(new User 
-            { 
-                UserID = user.UserID,
-                Username = user.Username, 
-                Password = user.Password});
+            // Save user with the hashed password and salt
+            user.Password = hashedPassword;
+            user.Salt = Convert.ToBase64String(salt); // Save the salt as well for verification later
+
+            // Save user to the in-memory list
+            _users.Add(user);
             SaveUsers(_users);
             return true;
         }

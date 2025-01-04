@@ -6,6 +6,10 @@
 @inject NavigationManager Nav
 @inject IUserInterface UserService
 
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
 <style>
     body {
         margin: 0;
@@ -16,7 +20,7 @@
         height: 100vh;
         background-image: url('/images/login-bg.jpg');
         background-size: cover;
-        font-family: Arial, sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
     .login-container {
@@ -24,7 +28,7 @@
         padding: 20px;
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        width: 300px;
+        width: 350px;
         text-align: center;
     }
 
@@ -63,10 +67,33 @@
             .login-container span:hover {
                 text-decoration: underline;
             }
+
+        .login-container span {
+            display: block;
+            margin-top: 10px;
+            color: #5a4fcf;
+            cursor: pointer;
+        }
+
+        .login-container h3 {
+            margin: 5px 0;
+            font-size: 24px;
+            color: #5a4fcf;
+            font-weight: bold;
+        }
+
+        .login-container h4 {
+            margin: 5px 0;
+            font-size: 15px;
+            color: #5a4fcf;
+            font-weight: normal;
+        }
 </style>
 
 <div class="login-container">
     <h2>Register</h2>
+    <h3>FinTrail</h3>
+    <h4>Track, Save, and Grow Your Wealth</h4>
     <form @onsubmit="HandleRegister">
         <input type="text" placeholder="Username" @bind="Username" required />
         <input type="password" placeholder="Password" @bind="Password" required />

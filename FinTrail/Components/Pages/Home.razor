@@ -5,6 +5,10 @@
 @inject NavigationManager Nav
 @inject IUserInterface UserService
 
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
 <style>
     body {
         margin: 0;
@@ -15,7 +19,7 @@
         height: 100vh;
         background-image: url('/images/login-bg.jpg');
         background-size: cover;
-        font-family: Arial, sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
     .login-container {
@@ -23,49 +27,65 @@
         padding: 20px;
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        width: 300px;
+        width: 350px;
         text-align: center;
     }
 
-        .login-container h2 {
-            margin-bottom: 20px;
-        }
+    .login-container h2 {
+        margin-bottom: 10px;
+    }
 
-        .login-container input,
-        .login-container select,
-        .login-container button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-        }
+    .login-container h3 {
+        margin: 5px 0;
+        font-size: 24px; 
+        color: #5a4fcf;
+        font-weight: bold;
+    }
 
-        .login-container button {
-            background-color: #5a4fcf;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+    .login-container h4 {
+        margin: 5px 0;
+        font-size: 15px;
+        color: #5a4fcf;
+        font-weight: normal;
+    }
 
-            .login-container button:hover {
-                background-color: #473cb3;
-            }
+    .login-container input,
+    .login-container select,
+    .login-container button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
 
-        .login-container span {
-            display: block;
-            margin-top: 10px;
-            color: #5a4fcf;
-            cursor: pointer;
-        }
+    .login-container button {
+        background-color: #5a4fcf;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
 
-            .login-container span:hover {
-                text-decoration: underline;
-            }
+    .login-container button:hover {
+        background-color: #473cb3;
+    }
+
+    .login-container span {
+        display: block;
+        margin-top: 10px;
+        color: #5a4fcf;
+        cursor: pointer;
+    }
+
+    .login-container span:hover {
+        text-decoration: underline;
+    }
 </style>
 
 <div class="login-container">
     <h2>Login</h2>
+    <h3>FinTrail</h3>
+    <h4>Track, Save, and Grow Your Wealth</h4>
     <form @onsubmit="HandleLogin">
         <input type="text" placeholder="Username" @bind="Username" required />
         <input type="password" placeholder="Password" @bind="Password" required />
@@ -80,7 +100,7 @@
     </form>
     @if (ErrorMessage != null)
     {
-        <p style="color:red;">@ErrorMessage</p>
+            <p style="color:red;">@ErrorMessage</p>
     }
     <span @onclick="GoToRegisterPage">Do you have an Account?</span>
 </div>
