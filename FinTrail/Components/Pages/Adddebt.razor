@@ -1,8 +1,14 @@
 ﻿@page "/adddebt"
 
+@using FinTrail.Model
+@using FinTrail.Services
+@using FinTrail.Services.Interface
+@inject NavigationManager Nav
+@inject IDebtInterface DebtService
+
 <style>
-/* Navigation Bar */
-.sidebar {
+    /* Navigation Bar */
+    .sidebar {
     display: inline-block;
     height: 100%;
     width: 200px;
@@ -12,46 +18,46 @@
     background-color: #c5e3b3;
     padding-top: 20px;
     text-align: center; 
-}
+    }
 
-.sidebar img {
+    .sidebar img {
     width: 80px; 
     height: 80px;
     border-radius: 50%; 
     margin-bottom: 20px; 
-}
+    }
 
-.sidebar ul {
+    .sidebar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
+    }
 
-.sidebar ul li {
+    .sidebar ul li {
     padding: 20px 0;
     text-align: center;
     font-family: 'Varela Round', Tahoma, sans-serif;
     font-size: 17px;
     font-weight: bold;
-}
+    }
 
-.sidebar ul li a {
+    .sidebar ul li a {
     color: #4a4a4a;
     text-decoration: none;
     display: block;
     padding: 10px 0;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
-}
+    }
 
-.sidebar ul li a:hover {
+    .sidebar ul li a:hover {
     color: #ffffff;
     background-color: #0078d7;
     cursor: pointer;
-}
+    }
 
-/* Form Styling */
-.form-container {
+    /* Form Styling */
+    .form-container {
     background-color: #c5e3b3;
     color: #4a4a4a; 
     border-radius: 10px;
@@ -59,30 +65,30 @@
     height: auto;
     overflow-y: auto;
     padding: 20px;
-}
+    }
 
-/* Form Labels and Inputs */
-.form-container .form-label {
+    /* Form Labels and Inputs */
+    .form-container .form-label {
     color: #4a4a4a;
-}
+    }
 
-.form-container .form-control {
+    .form-container .form-control {
     border-radius: 10px;
     border: 1px solid #4a4a4a;
-}
+    }
 
-/* Submit Button */
-.submit-btn {
+    /* Submit Button */
+    .submit-btn {
     border-radius: 10px;
     background-color: #28a745; 
     color: #ffffff; 
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
+    }
 
-.submit-btn:hover {
+    .submit-btn:hover {
     background-color: #52a34b;
     transform: scale(1.05); 
-}
+    }
 
 </style>
 
@@ -101,50 +107,104 @@
 
 @* Form to add Debt *@
 <div class="container d-flex justify-content-center align-items-center" style="height: 100vh; margin-left: 200px;">
-  <div class="form-container p-4">
-    <h2 class="text-center mb-3">Add Debt Details</h2>
-    <form>
+    <div class="form-container p-4">
+        <h2 class="text-center mb-3">Add Debt Details</h2>
+        <form @onsubmit="HandleSaveDebt">
+            <div class="mb-2">
+                <label for="debtFrom" class="form-label">Debt From</label>
+                <input type="text" class="form-control" @bind="DebtFrom" required>
+            </div>
 
-      <div class="mb-2">
-        <label for="debtFrom" class="form-label">Debt From</label>
-        <input type="text" class="form-control" name="debt_from" required>
-      </div>
+            <div class="mb-2">
+                <label for="Amount" class="form-label">Amount</label>
+                <input type="number" class="form-control" @bind="Amount" required>
+            </div>
 
-      <div class="mb-2">
-        <label for="Amount" class="form-label">Amount</label>
-        <input type="text" class="form-control" name="amount" required>
-      </div>
+            <div class="mb-2">
+                <label for="startDate" class="form-label">Start Date</label>
+                <input type="date" class="form-control" @bind="StartDate" required>
+            </div>
 
-     <div class="mb-2">
-        <label for="debtstartDate" class="form-label">Strat Date</label>
-        <input type="date" class="form-control" id="startDate" name="start_date" required>
-      </div>
+            <div class="mb-2">
+                <label for="debtendDate" class="form-label">End Date</label>
+                <input type="date" class="form-control" @bind="EndDate" required>
+            </div>
 
-      <div class="mb-2">
-        <label for="debtendDate" class="form-label">End Date</label>
-        <input type="date" class="form-control" id="endDate" name="end_date" required>
-      </div>
+            <div class="mb-2">
+                <label for="relationship" class="form-label">Relationship</label>
+                <select class="form-control" @bind="Relationship" required>
+                    <option value="" disabled selected>Select Relationship</option>
+                    <option value="Bank">Bank</option>
+                    <option value="Family">Family</option>
+                    <option value="Friends">Friends</option>
+                    <option value="Small Finance">Small Finance</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
 
-      <div class="mb-2">
-        <label for="relationship" class="form-label">Relationship</label>
-        <select class="form-control" id="relationship" name="relationship" required>
-            <option value="" disabled selected>Select Relationship</option>
-            <option value="Bank">Bank</option>
-            <option value="Family">Family</option>
-            <option value="Friends">Friends</option>
-            <option value="Small Finance">Small Finance</option>
-            <option value="Others">Others</option>
-        </select>
-     </div>
+            <div class="mb-2">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-control" @bind="Status" required>
+                    <option value="" disabled selected>Select Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Paid">Paid</option>
+                </select>
+            </div>
 
-      <div class="mb-2">
-        <label for="debtDescription" class="form-label">Description</label>
-        <textarea class="form-control" name="debt_description" rows="5" required></textarea>
-      </div>
+            <div class="mb-2">
+                <label for="debtDescription" class="form-label">Description</label>
+                <textarea class="form-control" @bind="Description" rows="5" required></textarea>
+            </div>
 
-      <div class="text-center" style="margin-top: 20px;">
-        <button type="submit" class="btn submit-btn">Submit</button>
-      </div>
-    </form>
-  </div>
+            <div class="text-center" style="margin-top: 20px;">
+                <button type="submit" class="btn submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
 </div>
+
+@code {
+    public string DebtFrom { get; set; }
+    public decimal Amount { get; set; }
+    public DateOnly StartDate { get; set; }
+    public DateOnly EndDate { get; set; }
+    public string Relationship { get; set; }
+    public string Description { get; set; }
+    public string Status { get; set; }
+
+    private string ErrorMessage { get; set; }
+
+    private async Task HandleSaveDebt()
+    {
+        try
+        {
+            if(Amount < 1)
+            {
+                ErrorMessage = "Amount cannout be less than one.";
+            }
+            var newDebt = new FinTrail.Model.Debt
+                {
+                    DebtFrom = DebtFrom,
+                    Amount = Amount,
+                    StartDate = StartDate,
+                    EndDate = EndDate,
+                    Relationship = Relationship,
+                    Description = Description,
+                    Status = Status
+                };
+
+            if (DebtService.AddDebt(newDebt))
+            {
+                Nav.NavigateTo("/debt");
+            }
+            else
+            {
+                ErrorMessage = "Failed to add debt. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+}
