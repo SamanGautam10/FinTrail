@@ -50,7 +50,7 @@ namespace FinTrail.Services
 
         public List<Debt> GetAllDebts()
         {
-            throw new NotImplementedException();
+            return _debts; // Return the in-memory list of debts
         }
     }
 }
