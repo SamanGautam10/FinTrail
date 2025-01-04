@@ -15,5 +15,8 @@ namespace FinTrail.Services.Interface
         // Retrieves a list of all registered users.
         // Returns the complete collection of User objects.
         List<User> GetAllUsers();
+
+        //function to perform logout
+        void Logout();
     }
 }

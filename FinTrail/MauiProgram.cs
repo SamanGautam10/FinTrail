@@ -24,6 +24,7 @@ namespace FinTrail
     		builder.Logging.AddDebug();
             builder.Services.AddMudServices();
             builder.Services.AddScoped<IUserInterface, UserService>();
+            builder.Services.AddScoped<UserService>();
 #endif
 
             return builder.Build();

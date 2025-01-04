@@ -1,0 +1,126 @@
+﻿@page "/debt"
+
+<style>
+/* Navigation Bar */
+.sidebar {
+    display: inline-block;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #c5e3b3;
+    padding-top: 20px;
+    text-align: center; 
+}
+
+.sidebar img {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Varela Round', Tahoma, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.sidebar ul li a {
+    color: #4a4a4a;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+    color: #ffffff;
+    background-color: #0078d7;
+    cursor: pointer;
+}
+
+    /* Move the table to the right */
+    .container {
+        margin-left: 270px;
+    }
+
+    .debt-table {
+        margin-left: 20px;
+    }
+
+        /* Adjusting the Description column width */
+        .debt-table table th:nth-child(8),
+        .debt-table table td:nth-child(8) {
+            width: 250px;
+        }
+
+</style>
+
+<div class="sidebar">
+    <!-- Logo -->
+    <img src="/images/FinTrail.png" alt="Logo">
+
+    <ul>
+        <li><a href="/dashboard" activeClass="active">Dashboard</a></li>
+        <li><a href="/balance" activeClass="active">Balance</a></li>
+        <li><a href="/transaction" activeClass="active">Transactions</a></li>
+        <li><a href="/debt" activeClass="active">Debt</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+</div>
+
+@* table data here *@
+<div class="container mt-5">
+    <!-- Add Transaction Button -->
+    <div class="add-debt-btn text-end mb-3">
+        <a class="btn btn-primary btn-lg" href="/adddebt">Add Your Debt</a>
+    </div>
+
+    <!-- Transaction Table -->
+    <div class="debt-table">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>SN.</th>
+                    <th>Debt From</th>
+                    <th>Amount</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Relationship</th>
+                    <th>Status</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Start here -->
+                <tr>
+                    <td>1</td>
+                    <td>Saman Gautam</td>
+                    <td>NPR. 5000</td>
+                    <td>2024-12-10</td>
+                    <td>2025-01-05</td>
+                    <td>Family</td>
+                    <td>Unpaid</td>
+                    <td>It was taken for some thing</td>
+                    <td>
+                        <a href="" class="btn btn-warning btn-sm me-2"><i class="bi bi-pencil-square"></i></a>
+                        <a href="" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
+                    </td>
+                </tr>
+                <!-- End here -->
+            </tbody>
+        </table>
+    </div>
+</div>

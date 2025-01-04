@@ -1,0 +1,92 @@
+﻿@page "/logout"
+@using FinTrail.Services
+
+@inject NavigationManager NavigationManager
+@inject UserService UserService
+
+<style>
+/* Center the logout confirmation box */
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Varela Round', Tahoma, sans-serif;
+}
+
+.logout-box {
+    background-color: #f8f9fa;
+    padding: 20px 30px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.logout-box button {
+    margin: 10px 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.logout-box .btn-confirm {
+    background-color: #0078d7;
+    color: white;
+}
+
+.logout-box .btn-cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+.logout-box button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+</style>
+
+<div class="logout-container">
+    <div class="logout-box">
+        <h2>Are you sure you want to log out?</h2>
+        <button class="btn-confirm" @onclick="HandleLogout">Yes, Log Out</button>
+        <button class="btn-cancel" @onclick="CancelLogout">Cancel</button>
+    </div>
+</div>
+
+@code {
+    private async Task HandleLogout()
+    {
+        try
+        {
+            UserService.Logout(); // Clear the logged-in user
+            NavigationManager.NavigateTo("/", true); // Redirect to the login page
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Logout failed: {ex.Message}");
+            // Optionally, show an error message to the user.
+        }
+    }
+
+    private void CancelLogout()
+    {
+        try
+        {
+            NavigationManager.NavigateTo("/dashboard");
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Cancel Logout failed: {ex.Message}");
+        }
+    }
+}

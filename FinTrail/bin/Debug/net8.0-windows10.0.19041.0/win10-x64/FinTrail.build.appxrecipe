@@ -52,8 +52,8 @@
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\favicon.png">
       <PackagePath>wwwroot\favicon.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\images\fintrail.jpeg">
-      <PackagePath>wwwroot\images\fintrail.jpeg</PackagePath>
+    <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\images\FinTrail.png">
+      <PackagePath>wwwroot\images\FinTrail.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\images\login-bg.jpg">
       <PackagePath>wwwroot\images\login-bg.jpg</PackagePath>
@@ -258,6 +258,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.aspnetcore.components.webview.maui\8.0.83\lib\net8.0-windows10.0.19041\Microsoft.AspNetCore.Components.WebView.Maui.dll">
       <PackagePath>Microsoft.AspNetCore.Components.WebView.Maui.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.aspnetcore.cryptography.internal\9.0.0\lib\netstandard2.0\Microsoft.AspNetCore.Cryptography.Internal.dll">
+      <PackagePath>Microsoft.AspNetCore.Cryptography.Internal.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.aspnetcore.cryptography.keyderivation\9.0.0\lib\netstandard2.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll">
+      <PackagePath>Microsoft.AspNetCore.Cryptography.KeyDerivation.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.aspnetcore.metadata\8.0.10\lib\net8.0\Microsoft.AspNetCore.Metadata.dll">
       <PackagePath>Microsoft.AspNetCore.Metadata.dll</PackagePath>

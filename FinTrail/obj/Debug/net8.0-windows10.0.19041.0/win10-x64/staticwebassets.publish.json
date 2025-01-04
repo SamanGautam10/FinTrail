@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/HVsDjHX6qVSngTb88CVMeyq1NzdZG9WQZcTn6YGe54=",
+  "Hash": "O994THxhKRnW7EEH3BPhYGwQQp/w8yOpKLXRQ1PoHio=",
   "Source": "FinTrail",
   "BasePath": "/",
   "Mode": "Root",
@@ -185,12 +185,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\fintrail.jpeg",
+      "Identity": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\FinTrail.png",
       "SourceId": "FinTrail",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "images/fintrail#[.{fingerprint}]?.jpeg",
+      "RelativePath": "images/FinTrail#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -199,11 +199,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "2gfpdqipyq",
-      "Integrity": "ck9B+oMf7aYzfcYrRdCNHPfeE/j2HAWTB9+w4yHaivg=",
+      "Fingerprint": "3bx0jkssej",
+      "Integrity": "nyv7haxYg+g2wMnbzLfmna00KEL3fctj6l4U5ghBg+M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\fintrail.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\FinTrail.png"
     },
     {
       "Identity": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\login-bg.jpg",
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "gb1to4zum8",
-      "Integrity": "FPwo9gviQVHQTT+8Du82AnNIUh99Yt8KbYXqXIY5wlU=",
+      "Fingerprint": "3lzqfypy0j",
+      "Integrity": "p30Wr+yv/9ErI/5cVykKuQvTa6ZiaBxftLo2yyp4TyQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -816,8 +816,8 @@
       ]
     },
     {
-      "Route": "images/fintrail.2gfpdqipyq.jpeg",
-      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\fintrail.jpeg",
+      "Route": "images/FinTrail.3bx0jkssej.png",
+      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\FinTrail.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -826,19 +826,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "151999"
+          "Value": "19501"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"ck9B+oMf7aYzfcYrRdCNHPfeE/j2HAWTB9+w4yHaivg=\""
+          "Value": "\"nyv7haxYg+g2wMnbzLfmna00KEL3fctj6l4U5ghBg+M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 01 Jan 2025 13:45:52 GMT"
+          "Value": "Sat, 04 Jan 2025 06:57:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -848,21 +848,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "2gfpdqipyq"
+          "Value": "3bx0jkssej"
         },
         {
           "Name": "label",
-          "Value": "images/fintrail.jpeg"
+          "Value": "images/FinTrail.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ck9B+oMf7aYzfcYrRdCNHPfeE/j2HAWTB9+w4yHaivg="
+          "Value": "sha256-nyv7haxYg+g2wMnbzLfmna00KEL3fctj6l4U5ghBg+M="
         }
       ]
     },
     {
-      "Route": "images/fintrail.jpeg",
-      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\fintrail.jpeg",
+      "Route": "images/FinTrail.png",
+      "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\images\\FinTrail.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -871,19 +871,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "151999"
+          "Value": "19501"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"ck9B+oMf7aYzfcYrRdCNHPfeE/j2HAWTB9+w4yHaivg=\""
+          "Value": "\"nyv7haxYg+g2wMnbzLfmna00KEL3fctj6l4U5ghBg+M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 01 Jan 2025 13:45:52 GMT"
+          "Value": "Sat, 04 Jan 2025 06:57:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -893,7 +893,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ck9B+oMf7aYzfcYrRdCNHPfeE/j2HAWTB9+w4yHaivg="
+          "Value": "sha256-nyv7haxYg+g2wMnbzLfmna00KEL3fctj6l4U5ghBg+M="
         }
       ]
     },
@@ -980,7 +980,7 @@
       ]
     },
     {
-      "Route": "index.gb1to4zum8.html",
+      "Route": "index.3lzqfypy0j.html",
       "AssetFile": "E:\\Islington\\Coursework\\Year 3\\Semester 1\\Application Development\\FinTrail\\FinTrail\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -990,7 +990,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1127"
+          "Value": "1346"
         },
         {
           "Name": "Content-Type",
@@ -998,11 +998,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"FPwo9gviQVHQTT+8Du82AnNIUh99Yt8KbYXqXIY5wlU=\""
+          "Value": "\"p30Wr+yv/9ErI/5cVykKuQvTa6ZiaBxftLo2yyp4TyQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 29 Dec 2024 03:54:51 GMT"
+          "Value": "Sat, 04 Jan 2025 06:39:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1012,7 +1012,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "gb1to4zum8"
+          "Value": "3lzqfypy0j"
         },
         {
           "Name": "label",
@@ -1020,7 +1020,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-FPwo9gviQVHQTT+8Du82AnNIUh99Yt8KbYXqXIY5wlU="
+          "Value": "sha256-p30Wr+yv/9ErI/5cVykKuQvTa6ZiaBxftLo2yyp4TyQ="
         }
       ]
     },
@@ -1035,7 +1035,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1127"
+          "Value": "1346"
         },
         {
           "Name": "Content-Type",
@@ -1043,11 +1043,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"FPwo9gviQVHQTT+8Du82AnNIUh99Yt8KbYXqXIY5wlU=\""
+          "Value": "\"p30Wr+yv/9ErI/5cVykKuQvTa6ZiaBxftLo2yyp4TyQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 29 Dec 2024 03:54:51 GMT"
+          "Value": "Sat, 04 Jan 2025 06:39:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1057,7 +1057,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-FPwo9gviQVHQTT+8Du82AnNIUh99Yt8KbYXqXIY5wlU="
+          "Value": "sha256-p30Wr+yv/9ErI/5cVykKuQvTa6ZiaBxftLo2yyp4TyQ="
         }
       ]
     }

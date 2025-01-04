@@ -7,6 +7,8 @@ namespace FinTrail.Services
     public class UserService : UserBase, IUserInterface
     {
         private List<User> _users;
+        private User? _loggedInUser; // Track the currently logged-in user
+
 
         // Default admin username and password for initial seeding.
         public const string SeedUsername = "admin";
@@ -43,7 +45,9 @@ namespace FinTrail.Services
 
             if (existingUser != null)
             {
-                // Login successful, update the currency field
+                _loggedInUser = existingUser; // Set the logged-in user
+
+                // Login successful then update the currency field
                 existingUser.SelectedCurrency = user.SelectedCurrency;
 
                 // Save the updated users list back to the JSON file
@@ -71,6 +75,11 @@ namespace FinTrail.Services
                 Password = user.Password});
             SaveUsers(_users);
             return true;
+        }
+
+        public void Logout()
+        {
+            _loggedInUser = null; // Clear the logged-in user
         }
     }
 }

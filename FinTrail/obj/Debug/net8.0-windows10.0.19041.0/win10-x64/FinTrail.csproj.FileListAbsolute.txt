@@ -213,3 +213,5 @@ E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTr
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Localization.Abstractions.dll
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MudBlazor.dll
 E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinTrail.sourcelink.json
+E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
