@@ -1,7 +1,9 @@
 ﻿@page "/debt"
+
 @using FinTrail.Model
 @using FinTrail.Services.Interface
 @inject IDebtInterface DebtService
+@inject IUserInterface UserService
 
 <style>
     /* Navigation Bar */
@@ -83,7 +85,6 @@
     </ul>
 </div>
 
-
 <div class="container mt-5">
     <div class="add-debt-btn text-end mb-3">
         <a class="btn btn-primary btn-lg" href="/adddebt">Add Your Debt</a>
@@ -113,7 +114,7 @@
                         <tr>
                             <td>@sn</td>
                             <td>@debt.DebtFrom</td>
-                            <td>NPR. @debt.Amount</td>
+                            <td>@SelectedCurrency @debt.Amount</td>
                             <td>@debt.StartDate.ToString("yyyy-MM-dd")</td>
                             <td>@debt.EndDate.ToString("yyyy-MM-dd")</td>
                             <td>@debt.Relationship</td>
@@ -140,9 +141,11 @@
 
 @code {
     private List<FinTrail.Model.Debt> debts = new();
+    private string SelectedCurrency { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         debts = DebtService.GetAllDebts();
+        SelectedCurrency = UserService.GetLoggedInUser().SelectedCurrency;
     }
 }

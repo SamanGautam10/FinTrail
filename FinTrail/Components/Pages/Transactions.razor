@@ -1,70 +1,74 @@
 ﻿@page "/transaction"
 
+@using FinTrail.Model
+@using FinTrail.Services.Interface
+@inject ITransactionInterface TransactionService
+@inject IUserInterface UserService
+
 <style>
-/* Navigation Bar */
-.sidebar {
-    display: inline-block;
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #c5e3b3;
-    padding-top: 20px;
-    text-align: center; 
-}
+    /* Navigation Bar */
+    .sidebar {
+        display: inline-block;
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #c5e3b3;
+        padding-top: 20px;
+        text-align: center;
+    }
 
-.sidebar img {
-    width: 80px; 
-    height: 80px;
-    border-radius: 50%; 
-    margin-bottom: 20px; 
-}
+        .sidebar img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
 
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.sidebar ul li {
-    padding: 20px 0;
-    text-align: center;
-    font-family: 'Varela Round', Tahoma, sans-serif;
-    font-size: 17px;
-    font-weight: bold;
-}
+            .sidebar ul li {
+                padding: 20px 0;
+                text-align: center;
+                font-family: 'Varela Round', Tahoma, sans-serif;
+                font-size: 17px;
+                font-weight: bold;
+            }
 
-.sidebar ul li a {
-    color: #4a4a4a;
-    text-decoration: none;
-    display: block;
-    padding: 10px 0;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
+                .sidebar ul li a {
+                    color: #4a4a4a;
+                    text-decoration: none;
+                    display: block;
+                    padding: 10px 0;
+                    border-radius: 5px;
+                    transition: all 0.3s ease-in-out;
+                }
 
-.sidebar ul li a:hover {
-    color: #ffffff;
-    background-color: #0078d7;
-    cursor: pointer;
-}
+                    .sidebar ul li a:hover {
+                        color: #ffffff;
+                        background-color: #0078d7;
+                        cursor: pointer;
+                    }
 
-/* Move the table to the right */
-.container {
-    margin-left: 270px; 
-}
+    /* Move the table to the right */
+    .container {
+        margin-left: 270px;
+    }
 
-.transaction-table {
-    margin-left: 20px;
-}
+    .transaction-table {
+        margin-left: 20px;
+    }
 
-/* Adjusting the Description column width */
-.transaction-table table th:nth-child(6), 
-.transaction-table table td:nth-child(6) {
-    width: 270px;
-}
-
+        /* Adjusting the Notes column width */
+        .transaction-table table th:nth-child(6),
+        .transaction-table table td:nth-child(6) {
+            width: 270px;
+        }
 </style>
 
 <div class="sidebar">
@@ -80,45 +84,67 @@
     </ul>
 </div>
 
-@* table data here *@
 <div class="container mt-5">
     <!-- Add Transaction Button -->
     <div class="add-transaction-btn text-end mb-3">
-      <a class="btn btn-primary btn-lg" href="/addtransaction">Add Your Transaction</a>
+        <a class="btn btn-primary btn-lg" href="/addtransaction">Add Your Transaction</a>
     </div>
 
     <!-- Transaction Table -->
     <div class="transaction-table">
-      <table class="table table-striped table-hover">
-        <thead class="table-dark">
-          <tr>
-            <th>SN.</th>
-            <th>Transaction Name</th>
-            <th>Amount</th>
-            <th>Category</th>
-            <th>Date</th>
-            <th>Notes</th>
-            <th>Tags</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Start here -->
-            <tr>
-              <td>1</td>
-              <td>Saman Gautam</td>
-              <td>Saman Gautam</td>
-              <td>Saman Gautam</td>
-              <td>2024-12-24</td>
-              <td>sidnaskdn asdlans aj saljsjd askjasdahd lhlnas daja</td>
-              <td>Tags</td>
-              <td>
-                <a href="" class="btn btn-warning btn-sm me-2"><i class="bi bi-pencil-square"></i></a>
-                <a href="" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
-              </td>
-            </tr>
-          <!-- End here -->
-        </tbody>
-      </table>
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>SN.</th>
+                    <th>Transaction Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Notes</th>
+                    <th>Tags</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (transactions?.Any() == true)
+                {
+                    int sn = 1;
+                    foreach (var transaction in transactions)
+                    {
+                        <tr>
+                            <td>@sn</td>
+                            <td>@transaction.TransactionName</td>
+                            <td>@SelectedCurrency @transaction.Amount</td>
+                            <td>@transaction.Category</td>
+                            <td>@transaction.TransactionDate.ToString("yyyy-MM-dd")</td>
+                            <td>@transaction.Notes</td>
+                            <td>@transaction.Tags</td>
+                            <td>
+                                <a href="/edittransaction/@transaction.TransactionID" class="btn btn-warning btn-sm me-2"><i class="bi bi-pencil-square"></i></a>
+                                <a href="/deletetransaction/@transaction.TransactionID" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
+                            </td>
+                        </tr>
+                        sn++;
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="8" class="text-center">No transactions found.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
-  </div>
+</div>
+
+@code {
+    private List<FinTrail.Model.Transaction> transactions = new();
+    private string SelectedCurrency { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        transactions = TransactionService.GetAllTransactions();
+        SelectedCurrency = UserService.GetLoggedInUser().SelectedCurrency;
+    }
+}

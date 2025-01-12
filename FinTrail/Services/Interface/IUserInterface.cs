@@ -2,9 +2,9 @@
 
 namespace FinTrail.Services.Interface
 {
-     public interface IUserInterface
+    public interface IUserInterface
     {
-         // Authenticates a user based on their username and password.
+        // Authenticates a user based on their username and password.
         // Returns true if the credentials are valid, otherwise false.
         bool Login(User user);
 
@@ -18,5 +18,8 @@ namespace FinTrail.Services.Interface
 
         //function to perform logout
         void Logout();
+
+        // Retrives detail of logged in user
+        User? GetLoggedInUser();
     }
 }

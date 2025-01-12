@@ -2,10 +2,6 @@
 using FinTrail.Model;
 using FinTrail.Services.Interface;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace FinTrail.Services
 {
@@ -19,6 +15,9 @@ namespace FinTrail.Services
         public const string SeedUsername = "admin";
         public const string SeedPassword = "password";
 
+        // Max User Count
+        private const int MaxUserCount = 2;
+
         public UserService()
         {
             _users = LoadUsers();
@@ -26,7 +25,7 @@ namespace FinTrail.Services
             // Ensure there's an admin user if no users exist.
             if (!_users.Any())
             {
-                _users.Add(new User { Username = SeedUsername, Password = SeedPassword});
+                _users.Add(new User { Username = SeedUsername, Password = SeedPassword });
                 SaveUsers(_users);
             }
         }
@@ -75,33 +74,43 @@ namespace FinTrail.Services
                 // Save the updated user list back to the JSON file
                 SaveUsers(_users);
 
-                return true; // Login successful
+                return true;
             }
 
-            return false; // Login failed: invalid username or password
+            return false; // Login failed
         }
 
         // Register method remains the same
         public bool Register(User user)
         {
-            // Generate a salt for the password
-            byte[] salt = new byte[128 / 8]; // 128-bit salt
+            // Check if the maximum allowed user count has been reached
+            if (_users.Count >= MaxUserCount)
+            {
+                throw new InvalidOperationException("User registration limit reached.Only one user can be registered.");
+            }
+
+            // Generate a salt for the password, 128 bit salt
+            byte[] salt = new byte[128 / 8];
             using (var rng = new System.Security.Cryptography.RNGCryptoServiceProvider())
             {
                 rng.GetBytes(salt); // Generate random bytes for the salt
             }
 
-            // Hash the password with the salt using PBKDF2
+            // Hash the password with the salt using PBKDF2, 10000 iterations
             string hashedPassword = Convert.ToBase64String(KeyDerivation.Pbkdf2(
                 password: user.Password,
                 salt: salt,
                 prf: KeyDerivationPrf.HMACSHA256,
-                iterationCount: 10000, // Perform 10,000 iterations
+                iterationCount: 10000,
                 numBytesRequested: 256 / 8)); // Request 256 bits (32 bytes) hash
 
-            // Save user with the hashed password and salt
+            // Generate UserID by finding the maximum UserID and incrementing it
+            int newUserID = _users.Any() ? _users.Max(u => u.UserID) + 1 : 1;
+            user.UserID = newUserID;
+
+            // Save user with the hashed password and salt for later verification
             user.Password = hashedPassword;
-            user.Salt = Convert.ToBase64String(salt); // Save the salt as well for verification later
+            user.Salt = Convert.ToBase64String(salt);
 
             // Save user to the in-memory list
             _users.Add(user);
@@ -112,6 +121,11 @@ namespace FinTrail.Services
         public void Logout()
         {
             _loggedInUser = null; // Clear the logged-in user
+        }
+
+        public User GetLoggedInUser()
+        {
+            return _loggedInUser;
         }
     }
 }

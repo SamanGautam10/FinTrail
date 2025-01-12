@@ -100,16 +100,16 @@
         <input type="password" placeholder="Confirm Password" @bind="ConfirmPassword" required />
         <select @bind="SelectedCurrency" required>
             <option value="" disabled selected>Select Currency</option>
-            <option value="NPR">NPR</option>
-            <option value="EUR">EUR</option>
-            <option value="GBP">GBP</option>
-            <option value="USD">USD</option>
+            <option value="Rs.">NPR</option>
+            <option value="€.">EUR</option>
+            <option value="£.">GBP</option>
+            <option value="$.">USD</option>
         </select>
         <button type="submit">Register</button>
     </form>
     @if (ErrorMessage != null)
     {
-        <p style="color:red;">@ErrorMessage</p>
+            <p style="color:red;">@ErrorMessage</p>
     }
     <span @onclick="GoToLoginPage">Already have an Account?</span>
 </div>
@@ -148,7 +148,7 @@
         }
         catch (Exception ex)
         {
-            ErrorMessage = $"An error occurred: {ex.Message}";
+            ErrorMessage = $"{ex.Message}";
         }
     }
 

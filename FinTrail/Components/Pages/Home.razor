@@ -1,4 +1,6 @@
 ﻿@page "/"
+
+
 @using FinTrail.Model
 @using FinTrail.Services;
 @using FinTrail.Services.Interface;
@@ -91,16 +93,16 @@
         <input type="password" placeholder="Password" @bind="Password" required />
         <select @bind="SelectedCurrency" required>
             <option value="" disabled selected>Select Currency</option>
-            <option value="NPR">NPR</option>
-            <option value="EUR">EUR</option>
-            <option value="GBP">GBP</option>
-            <option value="USD">USD</option>
+            <option value="Rs.">NPR</option>
+            <option value="€.">EUR</option>
+            <option value="£.">GBP</option>
+            <option value="$.">USD</option>
         </select>
         <button type="submit">Login</button>
     </form>
     @if (ErrorMessage != null)
     {
-            <p style="color:red;">@ErrorMessage</p>
+                <p style="color:red;">@ErrorMessage</p>
     }
     <span @onclick="GoToRegisterPage">Do you have an Account?</span>
 </div>
