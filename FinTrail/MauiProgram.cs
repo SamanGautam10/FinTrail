@@ -26,6 +26,7 @@ namespace FinTrail
             builder.Services.AddScoped<IUserInterface, UserService>();
             builder.Services.AddScoped<UserService>();
             builder.Services.AddScoped<IDebtInterface, DebtService>();
+            builder.Services.AddScoped<ITransactionInterface, TransactionService>();
 #endif
 
             return builder.Build();

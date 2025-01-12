@@ -1,7 +1,9 @@
 ﻿namespace FinTrail.Model
 {
+    // Class for Debt informations
     public class Debt
     {
+        //variables for debt info
         public int DebtID { get; set; }
         public required string DebtFrom { get; set; }
         public required decimal Amount { get; set; }
