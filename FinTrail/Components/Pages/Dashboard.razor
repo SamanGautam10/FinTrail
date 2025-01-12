@@ -50,8 +50,81 @@
     cursor: pointer;
 }
 
-</style>
+.main-dashboard {
+    margin-left: 220px;
+    padding: 20px;
+    font-family: 'Varela Round', Tahoma, sans-serif;
+    color: #333333; 
+}
 
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+.dashboard-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-section h2 {
+    color: #004d00; 
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.dashboard-section p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2f5a83; 
+}
+
+
+.total-balance {
+    background-color: #d1f7c4; 
+}
+
+.total-debts {
+    background-color: #fbd6d6; 
+}
+
+.unpaid-debts {
+    background-color: #fef1b2; 
+}
+
+.total-income {
+    background-color: #d1ecf1; 
+}
+
+/* Chart Container */
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.chart {
+    width: 48%;
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart h3 {
+    text-align: center;
+    color: #004d00; 
+    margin-bottom: 20px;
+}
+
+</style>
 
 <div class="sidebar">
     <!-- Logo -->
@@ -64,4 +137,44 @@
         <li><a href="/debt" activeClass="active">Debt</a></li>
         <li><a href="/logout">Logout</a></li>
     </ul>
+</div>
+
+<div class="main-dashboard">
+    <!-- Dashboard Sections Grid -->
+    <div class="dashboard-grid">
+        <div class="dashboard-section total-balance">
+            <h2>Total Balance</h2>
+            <p>$5,200.00</p>
+        </div>
+
+        <div class="dashboard-section total-debts">
+            <h2>Total Debts</h2>
+            <p>$1,500.00</p>
+        </div>
+
+        <div class="dashboard-section unpaid-debts">
+            <h2>Unpaid Debts</h2>
+            <p>$800.00</p>
+        </div>
+
+        <div class="dashboard-section total-income">
+            <h2>Total Income</h2>
+            <p>$12,000.00</p>
+        </div>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="chart-container">
+        <!-- Balance Trend Chart -->
+        <div class="chart">
+            <h3>Balance Trend</h3>
+            <canvas id="balanceTrendChart"></canvas>
+        </div>
+
+        <!-- Transaction Pie Chart -->
+        <div class="chart">
+            <h3>Transaction Distribution</h3>
+            <canvas id="transactionPieChart"></canvas>
+        </div>
+    </div>
 </div>

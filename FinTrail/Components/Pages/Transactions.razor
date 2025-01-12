@@ -109,7 +109,8 @@
                 @if (transactions?.Any() == true)
                 {
                     int sn = 1;
-                    foreach (var transaction in transactions)
+                    // Filter out transactions with TransactionID == 0 as it used only for seeding
+                    foreach (var transaction in transactions.Where(t => t.TransactionID != 0)) 
                     {
                         <tr>
                             <td>@sn</td>
