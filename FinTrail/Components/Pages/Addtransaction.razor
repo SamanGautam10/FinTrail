@@ -5,6 +5,7 @@
 @using FinTrail.Services.Interface
 @inject NavigationManager Nav
 @inject ITransactionInterface TransactionService
+@inject IUserInterface UserService
 
 <style>
     /* Navigation Bar */
@@ -177,7 +178,7 @@
     public required string TransactionName { get; set; }
     public required decimal Amount { get; set; }
     public required string Category { get; set; }
-    public DateOnly TransactionDate { get; set; }
+    public DateTime TransactionDate { get; set; } = DateTime.Now;
     public string Notes { get; set; }
     public string Tags { get; set; }
 
@@ -192,6 +193,11 @@
             {
                 ErrorMessage = "Amount cannout be less than one.";
             }
+
+            // Call service to update balance
+            var username = UserService.GetLoggedInUser()?.Username;
+            UserService.UpdateBalance(username, Amount, Category);
+
             var newTransaction = new FinTrail.Model.Transaction
                 {
                     TransactionName = TransactionName,
@@ -208,7 +214,7 @@
             }
             else
             {
-                ErrorMessage = "Failed to add debt. Please try again.";
+                ErrorMessage = "Failed to add transaction. Please try again.";
             }
         }
         catch (Exception ex)

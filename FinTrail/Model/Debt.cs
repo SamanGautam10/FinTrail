@@ -7,8 +7,8 @@
         public int DebtID { get; set; }
         public required string DebtFrom { get; set; }
         public required decimal Amount { get; set; }
-        public DateOnly StartDate { get; set; }
-        public DateOnly EndDate { get; set; }
+        public DateTime StartDate { get; set; } = DateTime.Now;
+        public DateTime EndDate { get; set; } = DateTime.Now;
         public string Relationship { get; set; }
         public string Description { get; set; }
         public string Status { get; set; }

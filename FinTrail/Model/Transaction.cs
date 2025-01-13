@@ -6,8 +6,8 @@
         public int TransactionID { get; set; }
         public required string TransactionName { get; set; }
         public required decimal Amount { get; set; }
-        public required string Category { get; set; } // Debit or Credit
-        public DateOnly TransactionDate { get; set; }
+        public required string Category { get; set; }
+        public DateTime TransactionDate { get; set; } = DateTime.Now;
         public string Notes { get; set; }
         public string Tags { get; set; }
     }

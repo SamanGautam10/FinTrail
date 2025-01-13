@@ -20,8 +20,8 @@ namespace FinTrail.Services
                 {
                     DebtFrom = "Saman Gautam",
                     Amount = 2000m,
-                    StartDate = new DateOnly(2024, 12, 24),
-                    EndDate = new DateOnly(2025, 12, 21),
+                    StartDate = new DateTime(2024, 12, 24),
+                    EndDate = new DateTime(2025, 12, 21),
                     Relationship = "Family",
                     Description = "Debt Taken to buy new water bottle",
                     Status = "Pending"

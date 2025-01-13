@@ -20,7 +20,7 @@ namespace FinTrail.Services
                     TransactionName = "Saman Gautam",
                     Amount = 2000m,
                     Category = "Debit",
-                    TransactionDate = new DateOnly(2025, 12, 21),
+                    TransactionDate = new DateTime(2025, 12, 21),
                     Notes = "Family",
                     Tags = "Grocery"
                 });

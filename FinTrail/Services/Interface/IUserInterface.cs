@@ -21,5 +21,8 @@ namespace FinTrail.Services.Interface
 
         // Retrives detail of logged in user
         User? GetLoggedInUser();
+
+        // Function to update balance
+        void UpdateBalance(string username, decimal transactionAmount, string category);
     }
 }
