@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinTrail")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d0e6a9bb5de7edc9067d093fbf9863500156769d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+0b8094e75f8896592cf9c175cff552930cfc4dd4")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinTrail")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinTrail")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

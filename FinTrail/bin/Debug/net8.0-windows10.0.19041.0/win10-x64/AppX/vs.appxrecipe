@@ -29,7 +29,7 @@
     <AppXManifest Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-13T14:26:35.317</Modified>
+      <Modified>2025-01-14T08:21:02.062</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FinTrail.dll">
       <PackagePath>FinTrail.dll</PackagePath>
-      <Modified>2025-01-13T14:26:34.493</Modified>
+      <Modified>2025-01-14T08:21:01.780</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>FinTrail.exe</PackagePath>
-      <Modified>2025-01-13T14:26:34.539</Modified>
+      <Modified>2025-01-14T08:21:01.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -79,7 +79,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
-      <Modified>2025-01-04T11:06:06.835</Modified>
+      <Modified>2025-01-14T08:16:44.269</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
@@ -687,7 +687,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Islington\Coursework\Year 3\Semester 1\Application Development\FinTrail\FinTrail\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.build.endpoints.json">
       <PackagePath>FinTrail.staticwebassets.endpoints.json</PackagePath>
-      <Modified>2025-01-04T11:23:49.141</Modified>
+      <Modified>2025-01-14T08:16:58.968</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Saman\.nuget\packages\microsoft.maui.controls.compatibility\8.0.83\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

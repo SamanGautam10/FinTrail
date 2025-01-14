@@ -26,34 +26,53 @@
             margin-bottom: 20px;
         }
 
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+    .balance-display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        margin-top: 35px;
+        margin-bottom: 10px;
+        font-family: 'Varela Round', Tahoma, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        color: #4a4a4a;
+    }
+
+        .balance-display i {
+            font-size: 24px;
+            margin-right: 8px;
+            color: #0078d7;
         }
 
-            .sidebar ul li {
-                padding: 20px 0;
-                text-align: center;
-                font-family: 'Varela Round', Tahoma, sans-serif;
-                font-size: 17px;
-                font-weight: bold;
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .sidebar ul li {
+            padding: 20px 0;
+            text-align: center;
+            font-family: 'Varela Round', Tahoma, sans-serif;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+            .sidebar ul li a {
+                color: #4a4a4a;
+                text-decoration: none;
+                display: block;
+                padding: 10px 0;
+                border-radius: 5px;
+                transition: all 0.3s ease-in-out;
             }
 
-                .sidebar ul li a {
-                    color: #4a4a4a;
-                    text-decoration: none;
-                    display: block;
-                    padding: 10px 0;
-                    border-radius: 5px;
-                    transition: all 0.3s ease-in-out;
+                .sidebar ul li a:hover {
+                    color: #ffffff;
+                    background-color: #0078d7;
+                    cursor: pointer;
                 }
-
-                    .sidebar ul li a:hover {
-                        color: #ffffff;
-                        background-color: #0078d7;
-                        cursor: pointer;
-                    }
 
     /* Move the table to the right */
     .container {
@@ -75,6 +94,11 @@
 <div class="sidebar">
     <!-- Logo -->
     <img src="/images/FinTrail.png" alt="Logo">
+
+    <!-- Balance Display -->
+    <div class="balance-display">
+        <i class="fas fa-coins"></i> @UserService.GetBalance().SelectedCurrency @UserService.GetBalance().Balance
+    </div>
 
     <ul>
         <li><a href="/dashboard" activeClass="active">Dashboard</a></li>
@@ -109,8 +133,6 @@
                 @if (debts?.Any() == true)
                 {
                     int sn = 1;
-
-                    // Filtering out DebtID 0 as it is only used for seeding
                     foreach (var debt in debts.Where(t => t.DebtID != 0))
                     {
                         <tr>

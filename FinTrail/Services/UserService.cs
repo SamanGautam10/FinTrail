@@ -118,34 +118,56 @@ namespace FinTrail.Services
             return true;
         }
 
+        // Get logged in User
+        public User? GetLoggedInUser()
+        {
+
+            return _loggedInUser;
+        }
+
         // Clear the logged-in user
         public void Logout()
         {
             _loggedInUser = null;
         }
 
-        // Get logged in User
-        public User GetLoggedInUser()
+        // Getting balance of the user
+        public User GetBalance()
         {
-            return _loggedInUser;
+            if (_loggedInUser == null)
+            {
+                throw new InvalidOperationException("No user is logged in.");
+            }
+
+            return new User
+            {
+                Balance = _loggedInUser.Balance,
+                SelectedCurrency = _loggedInUser.SelectedCurrency
+            };
         }
 
         // Updating user balance
-        public void UpdateBalance(string username, decimal transactionAmount, string category)
+        public void UpdateBalance(string username, decimal Amount, string category)
         {
             var user = _users.FirstOrDefault(u => u.Username == username);
 
             if (category == "Debit")
             {
-                if (user.Balance < transactionAmount)
-                {
-                    throw new InvalidOperationException("Insufficient balance.");
-                }
-                user.Balance = user.Balance - transactionAmount;
+                user.Balance = user.Balance - Amount;
             }
             else if (category == "Credit")
             {
-                user.Balance = user.Balance + transactionAmount;
+                user.Balance = user.Balance + Amount;
+            }
+
+            else if (category == "Pending")
+            {
+                user.Balance = user.Balance + Amount;
+            }
+
+            else if (category == "Paid")
+            {
+                user.Balance = user.Balance - Amount;
             }
 
             SaveUsers(_users);

@@ -38,7 +38,7 @@ namespace FinTrail.Services
 
             // Generate TransactionID by finding the maximum TransactionID and incrementing it
             int newTransactionID = _transactions.Any() ? _transactions.Max(d => d.TransactionID) + 1 : 1;
-            transactions.TransactionID = newTransactionID;
+            transactions.TransactionID = newTransactionID; // Assign the generated TransactionID
 
             _transactions.Add(transactions); // Add the transaction object to the list
             SaveDebt(_transactions);  // Save the transaction to file

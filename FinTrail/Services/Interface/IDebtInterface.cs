@@ -8,8 +8,8 @@ namespace FinTrail.Services.Interface
         // Returns true if the debt is successful, or false if the there is any error 
         bool AddDebt(Debt debts);
 
-        // Retrieves a list of all registered users.
-        // Returns the complete collection of User objects.
+        // Retrieves a list of all debts.
+        // Returns the complete collection of Debts.
         List<Debt> GetAllDebts();
     }
 }

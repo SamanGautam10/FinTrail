@@ -1,11 +1,12 @@
 ﻿@page "/balance"
 
-@using MudBlazor
-@using System.Net.Http.Json
+@using FinTrail.Model
+@using FinTrail.Services.Interface
+@inject IUserInterface UserService
 
 <style>
-/* Navigation Bar */
-.sidebar {
+    /* Navigation Bar */
+    .sidebar {
     display: inline-block;
     height: 100%;
     width: 200px;
@@ -15,56 +16,72 @@
     background-color: #c5e3b3;
     padding-top: 20px;
     text-align: center;
-}
+    }
 
-.sidebar img {
+    .sidebar img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-bottom: 20px; 
-}
+    margin-bottom: 20px;
+    }
 
-.sidebar ul {
+    .balance-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-family: 'Varela Round', Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4a4a4a;
+    }
+
+    .balance-display i {
+    font-size: 24px;
+    margin-right: 8px;
+    color: #0078d7;
+    }
+
+    .sidebar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
+    }
 
-.sidebar ul li {
+    .sidebar ul li {
     padding: 20px 0;
     text-align: center;
     font-family: 'Varela Round', Tahoma, sans-serif;
     font-size: 17px;
     font-weight: bold;
-}
+    }
 
-.sidebar ul li a {
+    .sidebar ul li a {
     color: #4a4a4a;
     text-decoration: none;
     display: block;
     padding: 10px 0;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
-}
+    }
 
-.sidebar ul li a:hover {
+    .sidebar ul li a:hover {
     color: #ffffff;
     background-color: #0078d7;
     cursor: pointer;
-}
-
-.active {
-    color: #ffffff;
-    background-color: #0078d7;
-}
-
-</style
-
-<!-- Style for Sidebar and Content (as you have in your current code) -->
+    }
+</style>
 
 <div class="sidebar">
     <!-- Logo -->
     <img src="/images/FinTrail.png" alt="Logo">
+
+    <!-- Balance Display -->
+    <div class="balance-display">
+        <i class="fas fa-coins"></i> @UserService.GetBalance().SelectedCurrency @UserService.GetBalance().Balance
+    </div>
 
     <ul>
         <li><a href="/dashboard" activeClass="active">Dashboard</a></li>

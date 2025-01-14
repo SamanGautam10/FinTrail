@@ -24,5 +24,8 @@ namespace FinTrail.Services.Interface
 
         // Function to update balance
         void UpdateBalance(string username, decimal transactionAmount, string category);
+
+        // Getting balance of the user
+        User GetBalance();
     }
 }
