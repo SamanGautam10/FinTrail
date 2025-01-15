@@ -143,7 +143,7 @@
                         sn++;
                     }
                 }
-                else
+                @if (filteredTransactions == null || filteredTransactions.All(t => t.TransactionID == 0))
                 {
                         <tr>
                             <td colspan="8" class="text-center">No transactions found.</td>

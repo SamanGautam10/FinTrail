@@ -19,7 +19,7 @@ namespace FinTrail.Services
                 _debts.Add(new Debt
                 {
                     DebtFrom = "Saman Gautam",
-                    Amount = 2000m,
+                    Amount = 0m,
                     StartDate = new DateTime(2024, 12, 24),
                     EndDate = new DateTime(2025, 12, 21),
                     Relationship = "Family",
@@ -51,6 +51,11 @@ namespace FinTrail.Services
         public List<Debt> GetAllDebts()
         {
             return _debts; // Return the in-memory list of debts
+        }
+
+        public void UpdateDebt(List<Debt> debts)
+        {
+            SaveDebt(debts); // Save updated list of debts to the JSON file
         }
     }
 }

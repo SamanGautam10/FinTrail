@@ -11,5 +11,7 @@ namespace FinTrail.Services.Interface
         // Retrieves a list of all debts.
         // Returns the complete collection of Debts.
         List<Debt> GetAllDebts();
+
+        void UpdateDebt(List<Debt> debts);
     }
 }

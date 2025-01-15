@@ -93,7 +93,6 @@
         <button class="btn btn-primary" @onclick="ApplyFilters">Apply Filters</button>
     </div>
 
-
     <div class="text-end mb-3">
         <a class="btn btn-primary btn-lg" href="/adddebt">Add Your Debt</a>
     </div>
@@ -121,29 +120,32 @@
                     int sn = 1;
                     @foreach (var debt in filteredDebts.Where(d => d.DebtID != 0).Reverse())
                     {
-                        <tr>
-                            <td>@sn</td>
-                            <td>@debt.DebtFrom</td>
-                            <td>@SelectedCurrency @debt.Amount</td>
-                            <td>@debt.StartDate.ToString("yyyy-MM-dd")</td>
-                            <td>@debt.EndDate.ToString("yyyy-MM-dd")</td>
-                            <td>@debt.Relationship</td>
-                            <td>@debt.Status</td>
-                            <td>@debt.Description</td>
-                            <td>
-                                <button class="btn btn-success btn-sm me-2">
-                                    <i class="bi bi-cash"></i> Pay Debt
-                                </button>
-                            </td>
-                        </tr>
+                                <tr>
+                                    <td>@sn</td>
+                                    <td>@debt.DebtFrom</td>
+                                    <td>@SelectedCurrency @debt.Amount</td>
+                                    <td>@debt.StartDate.ToString("yyyy-MM-dd")</td>
+                                    <td>@debt.EndDate.ToString("yyyy-MM-dd")</td>
+                                    <td>@debt.Relationship</td>
+                                    <td>@debt.Status</td>
+                                    <td>@debt.Description</td>
+                                    <td>
+                                @if (debt.Status != "Paid")
+                                {
+                                                <button class="btn btn-success btn-sm me-2" @onclick="() => PayDebt(debt)">
+                                                    <i class="bi bi-cash"></i> Pay Debt
+                                                </button>
+                                }
+                                    </td>
+                                </tr>
                         sn++;
                     }
                 }
                 else
                 {
-                    <tr>
-                        <td colspan="9" class="text-center">No debts found.</td>
-                    </tr>
+                        <tr>
+                            <td colspan="9" class="text-center">No debts found.</td>
+                        </tr>
                 }
             </tbody>
         </table>
@@ -161,13 +163,24 @@
     private string sortBy = "None";
     private DateTime? startDate = null;
     private DateTime? endDate = null;
+    private string currentuser;
 
     protected override async Task OnInitializedAsync()
     {
         debts = DebtService.GetAllDebts();
         SelectedCurrency = UserService.GetLoggedInUser().SelectedCurrency;
         filteredDebts = debts;
+
         ApplyFilters(); // Apply default filtering logic
+        var loggedInUser = UserService.GetLoggedInUser();
+        if (loggedInUser != null)
+        {
+            currentuser = loggedInUser.Username;
+        }
+        else
+        {
+            currentuser = "Guest";
+        }
     }
 
     private void UpdateSearchBy(ChangeEventArgs e)
@@ -250,5 +263,12 @@
                 d.StartDate.Date <= endDate.Value.Date
             ).ToList();
         }
+    }
+
+    private void PayDebt(FinTrail.Model.Debt debt)
+    {
+        debt.Status = "Paid"; // Mark as paid
+        DebtService.UpdateDebt(debts); // Save updated debt list
+        filteredDebts = filteredDebts.Where(d => d.DebtID != debt.DebtID).ToList();
     }
 }

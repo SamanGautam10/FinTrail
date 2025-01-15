@@ -18,7 +18,7 @@ namespace FinTrail.Services
                 _transactions.Add(new Transaction
                 {
                     TransactionName = "Saman Gautam",
-                    Amount = 2000m,
+                    Amount = 0m,
                     Category = "Debit",
                     TransactionDate = new DateTime(2025, 12, 21),
                     Notes = "Family",
