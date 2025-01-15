@@ -8,86 +8,112 @@
 <style>
     /* Navigation Bar */
     .sidebar {
-        display: inline-block;
-        height: 100%;
-        width: 200px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #c5e3b3;
-        padding-top: 20px;
-        text-align: center;
+    display: inline-block;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #c5e3b3;
+    padding-top: 20px;
+    text-align: center;
     }
 
-        .sidebar img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
+    .sidebar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    }
 
     .balance-display {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        margin-top: 35px;
-        margin-bottom: 10px;
-        font-family: 'Varela Round', Tahoma, sans-serif;
-        font-size: 18px;
-        font-weight: bold;
-        color: #4a4a4a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-family: 'Varela Round', Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4a4a4a;
     }
 
-        .balance-display i {
-            font-size: 24px;
-            margin-right: 8px;
-            color: #0078d7;
-        }
+    .balance-display i {
+    font-size: 24px;
+    margin-right: 8px;
+    color: #0078d7;
+    }
 
     .sidebar ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     }
 
-        .sidebar ul li {
-            padding: 20px 0;
-            text-align: center;
-            font-family: 'Varela Round', Tahoma, sans-serif;
-            font-size: 17px;
-            font-weight: bold;
-        }
+    .sidebar ul li {
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Varela Round', Tahoma, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    }
 
-            .sidebar ul li a {
-                color: #4a4a4a;
-                text-decoration: none;
-                display: block;
-                padding: 10px 0;
-                border-radius: 5px;
-                transition: all 0.3s ease-in-out;
-            }
+    .sidebar ul li a {
+    color: #4a4a4a;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    }
 
-                .sidebar ul li a:hover {
-                    color: #ffffff;
-                    background-color: #0078d7;
-                    cursor: pointer;
-                }
+    .sidebar ul li a:hover {
+    color: #ffffff;
+    background-color: #0078d7;
+    cursor: pointer;
+    }
 
-    /* Move the table to the right */
     .container {
-        margin-left: 270px;
+    margin-left: 270px;
     }
 
     .transaction-table {
-        margin-left: 20px;
+    margin-left: 20px;
+    background-color: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-        /* Adjusting the Notes column width */
-        .transaction-table table th:nth-child(6),
-        .transaction-table table td:nth-child(6) {
-            width: 220px;
-        }
+    /* Adjusting the Notes column width */
+    .transaction-table table th:nth-child(6),
+    .transaction-table table td:nth-child(6) {
+    width: 220px;
+    }
+
+    .search-filter-sort {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+    }
+
+    .search-filter-sort .col-md-3 {
+    margin-left: 0;
+    }
+
+    .search-filter-sort select {
+    padding-left: 15px;
+    }
+
+    .search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cecfce;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    height: 37px;
+    }
 </style>
 
 <div class="sidebar">
@@ -100,15 +126,67 @@
     </div>
 
     <ul>
-        <li><a href="/dashboard" activeClass="active">Dashboard</a></li>
-        <li><a href="/balance" activeClass="active">Balance</a></li>
-        <li><a href="/transaction" activeClass="active">Transactions</a></li>
-        <li><a href="/debt" activeClass="active">Debt</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/transaction">Transactions</a></li>
+        <li><a href="/debt">Debt</a></li>
         <li><a href="/logout">Logout</a></li>
     </ul>
 </div>
 
 <div class="container mt-5">
+    <!-- Search, Filter, and Sort Options -->
+    <div class="row mb-3 search-filter-sort">
+        <!-- Search By Dropdown -->
+        <div class="col-md-3 position-relative">
+            <select class="form-select" id="searchBy" aria-label="Search By" @onchange="UpdateSearchBy">
+                <option selected>Search By</option>
+                <option value="TransactionName">Transaction Name</option>
+                <option value="TransactionDate">Date</option>
+                <option value="Tags">Tags</option>
+            </select>
+        </div>
+
+        <!-- Search Bar below Search By -->
+        <div class="col-md-3">
+            <input type="text" id="searchQuery" class="search-input" placeholder="Search..." @bind="searchQuery" />
+        </div>
+
+        <!-- Filter By Dropdown -->
+        <div class="col-md-3 position-relative">
+            <select class="form-select" id="filterBy" aria-label="Filter By" @onchange="UpdateFilterBy">
+                <option selected>Filter By</option>
+                <option value="Debit">Debit</option>
+                <option value="Credit">Credit</option>
+            </select>
+        </div>
+
+        <!-- Sort By Dropdown -->
+        <div class="col-md-3 position-relative">
+            <select class="form-select" id="sortBy" aria-label="Sort By" @onchange="UpdateSortBy">
+                <option selected>Sort By</option>
+                <option value="Amount:LowToHigh">Amount: High to Low</option>
+                <option value="Amount:HighToLow">Amount: Low to High</option>
+                <option value="Date:Ascending">Date: Descending</option>
+                <option value="Date:Descending">Date: Ascending</option>
+            </select>
+        </div>
+
+        <!-- Date Range Inputs -->
+        <div class="col-md-6 position-relative">
+            <label for="dateRange" class="form-label fw-bold mb-2 mt-3">Date Range</label>
+            <div class="d-flex justify-content-between">
+                <input type="date" id="startDate" class="search-input me-7" @bind="startDate" />
+                <input type="date" id="endDate" class="search-input" @bind="endDate" />
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Apply Filter Button -->
+    <div class="text-end mb-3">
+        <button class="btn btn-primary" @onclick="ApplyFilters">Apply Filters</button>
+    </div>
+
     <!-- Add Transaction Button -->
     <div class="add-transaction-btn text-end mb-3">
         <a class="btn btn-primary btn-lg" href="/addtransaction">Add Your Transaction</a>
@@ -116,6 +194,7 @@
 
     <!-- Transaction Table -->
     <div class="transaction-table">
+        <h4>Transaction Details</h4>
         <table class="table table-striped table-hover">
             <thead class="table-dark">
                 <tr>
@@ -130,33 +209,33 @@
                 </tr>
             </thead>
             <tbody>
-                @if (transactions?.Any() == true)
+                @if (filteredTransactions?.Any() == true)
                 {
                     int sn = 1;
                     // Filter out transactions with TransactionID == 0 as it used only for seeding
-                    foreach (var transaction in transactions.Where(t => t.TransactionID != 0))
+                    foreach (var transaction in filteredTransactions.Where(t => t.TransactionID != 0).Reverse())
                     {
-                        <tr>
-                            <td>@sn</td>
-                            <td>@transaction.TransactionName</td>
-                            <td>@SelectedCurrency @transaction.Amount</td>
-                            <td>@transaction.Category</td>
-                            <td>@transaction.TransactionDate.ToString("yyyy-MM-dd")</td>
-                            <td>@transaction.Notes</td>
-                            <td>@transaction.Tags</td>
-                            <td>
-                                <a href="/edittransaction/@transaction.TransactionID" class="btn btn-warning btn-sm me-2"><i class="bi bi-pencil-square"></i></a>
-                                <a href="/deletetransaction/@transaction.TransactionID" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
+                                <tr>
+                                    <td>@sn</td>
+                                    <td>@transaction.TransactionName</td>
+                                    <td>@SelectedCurrency @transaction.Amount</td>
+                                    <td>@transaction.Category</td>
+                                    <td>@transaction.TransactionDate.ToString("yyyy-MM-dd")</td>
+                                    <td>@transaction.Notes</td>
+                                    <td>@transaction.Tags</td>
+                                    <td>
+                                        <a href="/edittransaction/@transaction.TransactionID" class="btn btn-warning btn-sm me-2"><i class="bi bi-pencil-square"></i></a>
+                                        <a href="/deletetransaction/@transaction.TransactionID" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
+                                    </td>
+                                </tr>
                         sn++;
                     }
                 }
                 else
                 {
-                    <tr>
-                        <td colspan="8" class="text-center">No transactions found.</td>
-                    </tr>
+                        <tr>
+                            <td colspan="8" class="text-center">No transactions found.</td>
+                        </tr>
                 }
             </tbody>
         </table>
@@ -164,12 +243,92 @@
 </div>
 
 @code {
-    private List<FinTrail.Model.Transaction> transactions = new();
+    private List<Transaction> transactions = new();
+    private List<Transaction> filteredTransactions = new();
     private string SelectedCurrency { get; set; }
+    private string searchQuery = string.Empty;
+    private string searchBy = "TransactionName";
+    private string filterBy = "All";
+    private string sortBy = "None";
+    private DateTime? startDate = null;
+    private DateTime? endDate = null;
 
     protected override async Task OnInitializedAsync()
     {
         transactions = TransactionService.GetAllTransactions();
         SelectedCurrency = UserService.GetLoggedInUser().SelectedCurrency;
+        filteredTransactions = transactions; // Initialize with all transactions
+        ApplyFilters(); //Applies default filter
+    }
+
+    private void UpdateSearchBy(ChangeEventArgs e)
+    {
+        searchBy = e.Value.ToString();
+    }
+
+    private void UpdateFilterBy(ChangeEventArgs e)
+    {
+        filterBy = e.Value.ToString();
+    }
+
+    private void UpdateSortBy(ChangeEventArgs e)
+    {
+        sortBy = e.Value.ToString();
+    }
+
+    private void ApplyFilters()
+    {
+        filteredTransactions = transactions;
+
+        // Search Logic
+        if (!string.IsNullOrWhiteSpace(searchQuery))
+        {
+            filteredTransactions = filteredTransactions.Where(t =>
+                searchBy switch
+                {
+                    "TransactionName" => t.TransactionName.Contains(searchQuery, StringComparison.OrdinalIgnoreCase),
+                    "Tags" => t.Tags.Contains(searchQuery, StringComparison.OrdinalIgnoreCase),
+                    "TransactionDate" => t.TransactionDate.ToString("yyyy-MM-dd").Contains(searchQuery),
+                    _ => true
+                }).ToList();
+        }
+
+        // Filter by Category (Debit/Credit)
+        if (filterBy != "All")
+        {
+            filteredTransactions = filteredTransactions.Where(t => t.Category.Equals(filterBy, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+
+        // Sorting Logic
+        if (sortBy.StartsWith("Amount"))
+        {
+            // Check for the direction: Low to High or High to Low
+            filteredTransactions = sortBy switch
+            {
+                "Amount:LowToHigh" => filteredTransactions.OrderBy(t => t.Amount).ToList(),
+                "Amount:HighToLow" => filteredTransactions.OrderByDescending(t => t.Amount).ToList(),
+                _ => filteredTransactions
+            };
+        }
+
+        // Check for the direction: Ascending or Descending
+        if (sortBy.StartsWith("Date"))
+        {
+            filteredTransactions = sortBy switch
+            {
+                "Date:Ascending" => filteredTransactions.OrderBy(t => t.TransactionDate).ToList(),
+                "Date:Descending" => filteredTransactions.OrderByDescending(t => t.TransactionDate).ToList(),
+                _ => filteredTransactions
+            };
+        }
+
+        // Date Range Filtering
+        if (startDate.HasValue && endDate.HasValue)
+        {
+            filteredTransactions = filteredTransactions.Where(t =>
+                t.TransactionDate.Date >= startDate.Value.Date &&
+                t.TransactionDate.Date <= endDate.Value.Date
+            ).ToList();
+        }
     }
 }

@@ -1,6 +1,5 @@
 ﻿@page "/"
 
-
 @using FinTrail.Model
 @using FinTrail.Services;
 @using FinTrail.Services.Interface;
@@ -33,55 +32,55 @@
         text-align: center;
     }
 
-    .login-container h2 {
-        margin-bottom: 10px;
-    }
+        .login-container h2 {
+            margin-bottom: 10px;
+        }
 
-    .login-container h3 {
-        margin: 5px 0;
-        font-size: 24px; 
-        color: #5a4fcf;
-        font-weight: bold;
-    }
+        .login-container h3 {
+            margin: 5px 0;
+            font-size: 24px;
+            color: #5a4fcf;
+            font-weight: bold;
+        }
 
-    .login-container h4 {
-        margin: 5px 0;
-        font-size: 15px;
-        color: #5a4fcf;
-        font-weight: normal;
-    }
+        .login-container h4 {
+            margin: 5px 0;
+            font-size: 15px;
+            color: #5a4fcf;
+            font-weight: normal;
+        }
 
-    .login-container input,
-    .login-container select,
-    .login-container button {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
+        .login-container input,
+        .login-container select,
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
 
-    .login-container button {
-        background-color: #5a4fcf;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
+        .login-container button {
+            background-color: #5a4fcf;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
 
-    .login-container button:hover {
-        background-color: #473cb3;
-    }
+            .login-container button:hover {
+                background-color: #473cb3;
+            }
 
-    .login-container span {
-        display: block;
-        margin-top: 10px;
-        color: #5a4fcf;
-        cursor: pointer;
-    }
+        .login-container span {
+            display: block;
+            margin-top: 10px;
+            color: #5a4fcf;
+            cursor: pointer;
+        }
 
-    .login-container span:hover {
-        text-decoration: underline;
-    }
+            .login-container span:hover {
+                text-decoration: underline;
+            }
 </style>
 
 <div class="login-container">
@@ -102,7 +101,7 @@
     </form>
     @if (ErrorMessage != null)
     {
-                <p style="color:red;">@ErrorMessage</p>
+        <p style="color:red;">@ErrorMessage</p>
     }
     <span @onclick="GoToRegisterPage">Do you have an Account?</span>
 </div>

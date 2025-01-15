@@ -122,10 +122,9 @@
     </div>
 
     <ul>
-        <li><a href="/dashboard" activeClass="active">Dashboard</a></li>
-        <li><a href="/balance" activeClass="active">Balance</a></li>
-        <li><a href="/transaction" activeClass="active">Transactions</a></li>
-        <li><a href="/debt" activeClass="active">Debt</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/transaction">Transactions</a></li>
+        <li><a href="/debt">Debt</a></li>
         <li><a href="/logout">Logout</a></li>
     </ul>
 </div>
@@ -212,7 +211,6 @@
             if (Amount < 1)
             {
                 ErrorMessage = "Amount cannout be less than one.";
-                return;
             }
 
             // Call service to update balance

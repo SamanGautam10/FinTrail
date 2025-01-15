@@ -4,6 +4,7 @@
 @using FinTrail.Services.Interface
 @inject IDebtInterface DebtService
 @inject IUserInterface UserService
+@inject NavigationManager Nav
 
 <style>
     /* Navigation Bar */
@@ -74,21 +75,45 @@
                     cursor: pointer;
                 }
 
-    /* Move the table to the right */
     .container {
         margin-left: 270px;
     }
 
-    .transaction-table {
-        margin-left: 20px;
+    .debt-table {
+        margin-bottom: 30px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-        /* Adjusting the Description column width */
-        .transaction-table table th:nth-child(8),
-        .transaction-table table td:nth-child(8) {
+        .debt-table table th:nth-child(8),
+        .debt-table table td:nth-child(8) {
             width: 270px;
         }
 
+    .search-filter-sort {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 15px;
+    }
+
+        .search-filter-sort .col-md-3 {
+            margin-left: 0;
+        }
+
+        .search-filter-sort select {
+            padding-left: 15px;
+        }
+
+    .search-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #cecfce;
+        border-radius: 5px;
+        font-size: 14px;
+        box-sizing: border-box;
+        height: 37px;
+    }
 </style>
 
 <div class="sidebar">
@@ -101,20 +126,64 @@
     </div>
 
     <ul>
-        <li><a href="/dashboard" activeClass="active">Dashboard</a></li>
-        <li><a href="/balance" activeClass="active">Balance</a></li>
-        <li><a href="/transaction" activeClass="active">Transactions</a></li>
-        <li><a href="/debt" activeClass="active">Debt</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/transaction">Transactions</a></li>
+        <li><a href="/debt">Debt</a></li>
         <li><a href="/logout">Logout</a></li>
     </ul>
 </div>
 
 <div class="container mt-5">
-    <div class="add-debt-btn text-end mb-3">
+    <!-- Search, Filter, and Sort Options -->
+    <div class="row mb-3 search-filter-sort">
+        <div class="col-md-3 position-relative">
+            <select class="form-select" id="searchBy" aria-label="Search By" @onchange="UpdateSearchBy">
+                <option selected>Search By</option>
+                <option value="DebtFrom">Debt From</option>
+                <option value="StartDate">Start Date</option>
+                <option value="Relationship">Relationship</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <input type="text" id="searchQuery" class="search-input" placeholder="Search..." @bind="searchQuery" />
+        </div>
+        <div class="col-md-3 position-relative">
+            <select class="form-select" id="filterBy" aria-label="Filter By" @onchange="UpdateFilterBy">
+                <option selected>Filter By</option>
+                <option value="Pending">Pending</option>
+                <option value="Paid">Paid</option>
+            </select>
+        </div>
+        <div class="col-md-3 position-relative">
+            <select class="form-select" id="sortBy" aria-label="Sort By" @onchange="UpdateSortBy">
+                <option selected>Sort By</option>
+                <option value="Amount:LowToHigh">Amount: High to Low</option>
+                <option value="Amount:HighToLow">Amount: Low to High</option>
+                <option value="StartDate:Ascending">Start Date: Descending</option>
+                <option value="StartDate:Descending">Start Date: Ascending</option>
+            </select>
+        </div>
+        <div class="col-md-6 position-relative">
+            <label for="dateRange" class="form-label fw-bold mb-2 mt-3">Date Range</label>
+            <div class="d-flex justify-content-between">
+                <input type="date" id="startDate" class="search-input me-7" @bind="startDate" />
+                <input type="date" id="endDate" class="search-input" @bind="endDate" />
+            </div>
+        </div>
+    </div>
+
+    <div class="text-end mb-3">
+        <button class="btn btn-primary" @onclick="ApplyFilters">Apply Filters</button>
+    </div>
+
+
+    <div class="text-end mb-3">
         <a class="btn btn-primary btn-lg" href="/adddebt">Add Your Debt</a>
     </div>
 
+    <!-- Pending Debt Table -->
     <div class="debt-table">
+        <h4>Pending Debts</h4>
         <table class="table table-striped table-hover">
             <thead class="table-dark">
                 <tr>
@@ -130,10 +199,10 @@
                 </tr>
             </thead>
             <tbody>
-                @if (debts?.Any() == true)
+                @if (filteredDebts?.Any() == true)
                 {
                     int sn = 1;
-                    foreach (var debt in debts.Where(t => t.DebtID != 0))
+                    @foreach (var debt in filteredDebts.Where(d => d.DebtID != 0).Reverse())
                     {
                         <tr>
                             <td>@sn</td>
@@ -145,8 +214,9 @@
                             <td>@debt.Status</td>
                             <td>@debt.Description</td>
                             <td>
-                                <a href="" class="btn btn-warning btn-sm me-2"><i class="bi bi-pencil-square"></i></a>
-                                <a href="" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
+                                <button class="btn btn-success btn-sm me-2">
+                                    <i class="bi bi-cash"></i> Pay Debt
+                                </button>
                             </td>
                         </tr>
                         sn++;
@@ -165,11 +235,103 @@
 
 @code {
     private List<FinTrail.Model.Debt> debts = new();
+    private List<FinTrail.Model.Debt> filteredDebts = new();
+    private List<FinTrail.Model.Debt> pendingDebts = new();
     private string SelectedCurrency { get; set; }
+    private string searchQuery = string.Empty;
+    private string searchBy = "DebtFrom";
+    private string filterBy = "All";
+    private string sortBy = "None";
+    private DateTime? startDate = null;
+    private DateTime? endDate = null;
 
     protected override async Task OnInitializedAsync()
     {
         debts = DebtService.GetAllDebts();
         SelectedCurrency = UserService.GetLoggedInUser().SelectedCurrency;
+        filteredDebts = debts;
+        ApplyFilters(); // Apply default filtering logic
+    }
+
+    private void UpdateSearchBy(ChangeEventArgs e)
+    {
+        searchBy = e.Value.ToString();
+    }
+
+    private void UpdateFilterBy(ChangeEventArgs e)
+    {
+        filterBy = e.Value.ToString();
+    }
+
+    private void UpdateSortBy(ChangeEventArgs e)
+    {
+        sortBy = e.Value.ToString();
+    }
+
+    private void ApplyFilters()
+    {
+        filteredDebts = debts;
+
+        // Check if any filter is applied
+        bool isFilterApplied = !string.IsNullOrWhiteSpace(searchQuery) ||
+                               filterBy != "All" ||
+                               sortBy != "None" ||
+                               (startDate.HasValue && endDate.HasValue);
+
+        // If no filters are applied, show only pending debts
+        if (!isFilterApplied)
+        {
+            filteredDebts = filteredDebts.Where(d => d.Status.Equals("Pending", StringComparison.OrdinalIgnoreCase)).ToList();
+            return;
+        }
+
+        // Search Logic
+        if (!string.IsNullOrWhiteSpace(searchQuery))
+        {
+            filteredDebts = filteredDebts.Where(d =>
+                searchBy switch
+                {
+                    "DebtFrom" => d.DebtFrom.Contains(searchQuery, StringComparison.OrdinalIgnoreCase),
+                    "Relationship" => d.Relationship.Contains(searchQuery, StringComparison.OrdinalIgnoreCase),
+                    "StartDate" => d.StartDate.ToString("yyyy-MM-dd").Contains(searchQuery),
+                    _ => true
+                }).ToList();
+        }
+
+        // Filter by Status
+        if (filterBy != "All")
+        {
+            filteredDebts = filteredDebts.Where(d => d.Status.Equals(filterBy, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+
+        // Sorting Logic
+        if (sortBy.StartsWith("Amount"))
+        {
+            filteredDebts = sortBy switch
+            {
+                "Amount:LowToHigh" => filteredDebts.OrderBy(d => d.Amount).ToList(),
+                "Amount:HighToLow" => filteredDebts.OrderByDescending(d => d.Amount).ToList(),
+                _ => filteredDebts
+            };
+        }
+
+        if (sortBy.StartsWith("StartDate"))
+        {
+            filteredDebts = sortBy switch
+            {
+                "StartDate:Ascending" => filteredDebts.OrderBy(d => d.StartDate).ToList(),
+                "StartDate:Descending" => filteredDebts.OrderByDescending(d => d.StartDate).ToList(),
+                _ => filteredDebts
+            };
+        }
+
+        // Date Range Filtering
+        if (startDate.HasValue && endDate.HasValue)
+        {
+            filteredDebts = filteredDebts.Where(d =>
+                d.StartDate.Date >= startDate.Value.Date &&
+                d.StartDate.Date <= endDate.Value.Date
+            ).ToList();
+        }
     }
 }
