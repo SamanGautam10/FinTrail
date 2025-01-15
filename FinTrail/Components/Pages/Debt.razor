@@ -8,43 +8,43 @@
 
 <style>
     .container {
-        margin-left: 270px;
+    margin-left: 270px;
     }
 
     .debt-table {
-        margin-bottom: 30px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-        .debt-table table th:nth-child(8),
-        .debt-table table td:nth-child(8) {
-            width: 270px;
-        }
+    .debt-table table th:nth-child(8),
+    .debt-table table td:nth-child(8) {
+    width: 270px;
+    }
 
     .search-filter-sort {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
     }
 
-        .search-filter-sort .col-md-3 {
-            margin-left: 0;
-        }
+    .search-filter-sort .col-md-3 {
+    margin-left: 0;
+    }
 
-        .search-filter-sort select {
-            padding-left: 15px;
-        }
+    .search-filter-sort select {
+    padding-left: 15px;
+    }
 
     .search-input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #cecfce;
-        border-radius: 5px;
-        font-size: 14px;
-        box-sizing: border-box;
-        height: 37px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cecfce;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    height: 37px;
     }
 </style>
 
@@ -100,6 +100,12 @@
     <!-- Pending Debt Table -->
     <div class="debt-table">
         <h4>Pending Debts</h4>
+        @if (!string.IsNullOrEmpty(ErrorMessage))
+        {
+            <div class="alert alert-danger" role="alert">
+                @ErrorMessage
+            </div>
+        }
         <table class="table table-striped table-hover">
             <thead class="table-dark">
                 <tr>
@@ -120,32 +126,32 @@
                     int sn = 1;
                     @foreach (var debt in filteredDebts.Where(d => d.DebtID != 0).Reverse())
                     {
-                                <tr>
-                                    <td>@sn</td>
-                                    <td>@debt.DebtFrom</td>
-                                    <td>@SelectedCurrency @debt.Amount</td>
-                                    <td>@debt.StartDate.ToString("yyyy-MM-dd")</td>
-                                    <td>@debt.EndDate.ToString("yyyy-MM-dd")</td>
-                                    <td>@debt.Relationship</td>
-                                    <td>@debt.Status</td>
-                                    <td>@debt.Description</td>
-                                    <td>
+                        <tr>
+                            <td>@sn</td>
+                            <td>@debt.DebtFrom</td>
+                            <td>@SelectedCurrency @debt.Amount</td>
+                            <td>@debt.StartDate.ToString("yyyy-MM-dd")</td>
+                            <td>@debt.EndDate.ToString("yyyy-MM-dd")</td>
+                            <td>@debt.Relationship</td>
+                            <td>@debt.Status</td>
+                            <td>@debt.Description</td>
+                            <td>
                                 @if (debt.Status != "Paid")
                                 {
-                                                <button class="btn btn-success btn-sm me-2" @onclick="() => PayDebt(debt)">
-                                                    <i class="bi bi-cash"></i> Pay Debt
-                                                </button>
+                                    <button class="btn btn-success btn-sm me-2" @onclick="() => PayDebt(debt)">
+                                        <i class="bi bi-cash"></i> Pay Debt
+                                    </button>
                                 }
-                                    </td>
-                                </tr>
+                            </td>
+                        </tr>
                         sn++;
                     }
                 }
-                else
+                @if (filteredDebts == null || filteredDebts.All(d => d.DebtID == 0))
                 {
-                        <tr>
-                            <td colspan="9" class="text-center">No debts found.</td>
-                        </tr>
+                    <tr>
+                        <td colspan="9" class="text-center">No debts found.</td>
+                    </tr>
                 }
             </tbody>
         </table>
@@ -164,6 +170,7 @@
     private DateTime? startDate = null;
     private DateTime? endDate = null;
     private string currentuser;
+    private string ErrorMessage { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -267,8 +274,29 @@
 
     private void PayDebt(FinTrail.Model.Debt debt)
     {
-        debt.Status = "Paid"; // Mark as paid
-        DebtService.UpdateDebt(debts); // Save updated debt list
+        if (UserService.GetBalance()?.Balance < debt.Amount)
+        {
+            // Show error message if balance is insufficient
+            ErrorMessage = "Insufficient balance to pay this debt.";
+            StateHasChanged();
+            return;
+        }
+
+        // Deduct the debt amount from the user's balance
+        var username = UserService.GetLoggedInUser()?.Username;
+        UserService.UpdateBalance(username, debt.Amount, "Paid");
+
+        // Update the debt status to "Paid"
+        debt.Status = "Paid";
+        DebtService.UpdateDebt(debts);
+
+        // Refresh the filtered debts list
         filteredDebts = filteredDebts.Where(d => d.DebtID != debt.DebtID).ToList();
+
+        // Clear any previous error message
+        ErrorMessage = null;
+
+        // Explicitly notify Blazor to re-render the component
+        StateHasChanged();
     }
 }

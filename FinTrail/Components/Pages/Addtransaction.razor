@@ -84,12 +84,13 @@
 
             <div class="mb-2">
                 <label for="transactionNotes" class="form-label">Notes</label>
-                <textarea class="form-control" name="transaction_Notes" rows="5" @bind="Notes" required></textarea>
+                <textarea class="form-control" name="transaction_Notes" rows="5" @bind="Notes"></textarea>
             </div>
 
             <div class="mb-2">
                 <label for="tags" class="form-label">Tags</label>
-                <select class="form-control" name="tags" id="tags" @bind="Tags">
+                <select class="form-control" name="tags" id="tags" @bind="Tags" required>
+                    <option value="" disabled selected>Select Tags</option>
                     <!-- Existing Tags -->
                     @foreach (var tag in availableTags)
                     {
