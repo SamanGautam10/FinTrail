@@ -40,12 +40,12 @@ namespace FinTrail.Services
 
             // Generate DebtID by finding the maximum DebtID and incrementing it
             int newDebtID = _debts.Any() ? _debts.Max(d => d.DebtID) + 1 : 1;
-            debt.DebtID = newDebtID; // Assign the generated DebtID
+            debt.DebtID = newDebtID; 
 
-            _debts.Add(debt); // Add the debt object to the list
-            SaveDebt(_debts);  // Save the debts to file
+            _debts.Add(debt); 
+            SaveDebt(_debts);  
 
-            return true; // Indicate success
+            return true; 
         }
 
         public List<Debt> GetAllDebts()
