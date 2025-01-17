@@ -29,6 +29,7 @@ namespace FinTrail.Services
             }
         }
 
+        // Method to add transaction in json file
         public bool AddTransaction(Transaction transactions)
         {
             if (transactions == null)
@@ -46,6 +47,8 @@ namespace FinTrail.Services
             return true; // Indicate success
         }
 
+
+        // Method to get all transactions from json file
         public List<Transaction> GetAllTransactions()
         {
             return _transactions;

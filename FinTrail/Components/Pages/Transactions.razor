@@ -155,6 +155,7 @@
 </div>
 
 @code {
+    // initializatio of different variables
     private List<Transaction> transactions = new();
     private List<Transaction> filteredTransactions = new();
     private string SelectedCurrency { get; set; }
@@ -165,6 +166,7 @@
     private DateTime? startDate = null;
     private DateTime? endDate = null;
 
+    // Method to get all transction, selected currency of logged in user
     protected override async Task OnInitializedAsync()
     {
         transactions = TransactionService.GetAllTransactions();
@@ -173,6 +175,11 @@
         ApplyFilters(); //Applies default filter
     }
 
+    /*
+     * Below are the codes which are used to create a search, sorting and filtering functions
+     * Different data are filtered, searched or sort according to the data provided by the user 
+     * Or the option selected by the user
+     */
     private void UpdateSearchBy(ChangeEventArgs e)
     {
         searchBy = e.Value.ToString();

@@ -31,6 +31,7 @@ namespace FinTrail.Services
             }
         }
 
+        // Method to add debt in json file
         public bool AddDebt(Debt debt)
         {
             if (debt == null)
@@ -48,6 +49,7 @@ namespace FinTrail.Services
             return true; 
         }
 
+        // Method to get all debt information from json file
         public List<Debt> GetAllDebts()
         {
             return _debts; // Return the in-memory list of debts

@@ -112,11 +112,11 @@
     private string SelectedCurrency { get; set; }
     private string ErrorMessage { get; set; }
 
+    // Method to handle login function of the user
     private async Task HandleLogin()
     {
         try
         {
-            // Prevent default form submission
             var user = new User { Username = Username, Password = Password, SelectedCurrency = SelectedCurrency };
 
             // Validate the user credentials using the UserService
@@ -137,6 +137,7 @@
         }
     }
 
+    // Code block to navigate to register page
     private void GoToRegisterPage()
     {
         // Redirect to the register page

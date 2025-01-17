@@ -141,7 +141,7 @@
             if (Category == "Debit" && UserService.GetBalance().Balance < Amount)
             {
                 ErrorMessage = "Insufficient balance to conduct the transaction.";
-                return; // Stop execution
+                return; // Stop execution of code furthur 
             }
 
             // Update balance if valid

@@ -117,11 +117,29 @@
                 background-color: #f1f1f1;
             }
 
-
-    .pending-debt {
-        background-color: #ffebcc;
+    .highlight-heading {
+        color: #d35400; 
+        display: flex;
+        align-items: center;
+        gap: 10px;
         font-weight: bold;
+        font-size: 24px;
     }
+
+    .info-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        background-color: #ffebcc; 
+        color: #d35400;
+        border-radius: 50%;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
 
 </style>
 
@@ -147,11 +165,34 @@
             <h2>Total Income</h2>
             <p>@UserService.GetBalance().SelectedCurrency @TotalIncome</p>
         </div>
-    </div
+
+        <div class="dashboard-section total-balance">
+            <h2>Highest Transaction (Current Month)</h2>
+            <p>@UserService.GetBalance().SelectedCurrency @HighestTransactionAmount</p>
+        </div>
+
+        <div class="dashboard-section total-debts">
+            <h2>Lowest Transaction (Current Month)</h2>
+            <p>@UserService.GetBalance().SelectedCurrency @LowestTransactionAmount</p>
+        </div>
+
+        <div class="dashboard-section unpaid-debts">
+            <h2>Total Debts</h2>
+            <p>@UserService.GetBalance().SelectedCurrency @TotalDebtAmount</p>
+        </div>
+
+        <div class="dashboard-section total-income">
+            <h2>Total Paid Debts</h2>
+            <p>@UserService.GetBalance().SelectedCurrency @TotalPaidDebtAmount</p>
+        </div>
+    </div>
 
     <!-- Debts Table -->
     <div class="debt-table">
-        <h4>Unpaid Debts</h4>
+        <div class="highlight-heading mb-2">
+            <div class="info-icon">i</div>
+            Unpaid Debts
+        </div>
         <table class="table table-striped table-hover">
             <thead class="table-dark">
                 <tr>
@@ -199,6 +240,9 @@
     private decimal TotalUnpaidDebtAmount { get; set; }
     private decimal TotalIncome { get; set; }
     private decimal TotalExpenses { get; set; }
+    private decimal HighestTransactionAmount { get; set; }
+    private decimal LowestTransactionAmount { get; set; }
+    private decimal TotalPaidDebtAmount { get; set; }
 
     private int FilterMonth { get; set; } = 1; // January as default
     private int FilterYear { get; set; } = DateTime.Now.Year;
@@ -208,16 +252,24 @@
         // Pulling transaction info
         transactions = TransactionService.GetAllTransactions();
 
-        // Filter transactions for the specific month and year and calculate total for one certain month
-        TotalIncome = transactions.Where(t => t.TransactionDate.Month == FilterMonth && t.TransactionDate.Year == FilterYear && t.Category == "Credit").Sum(t => t.Amount);
+        // Filter transactions for the specific month and year and calculate totals for the month
+        var filteredTransactions = transactions.Where(t => t.TransactionDate.Month == FilterMonth && t.TransactionDate.Year == FilterYear);
 
-        TotalExpenses = transactions.Where(t => t.TransactionDate.Month == FilterMonth && t.TransactionDate.Year == FilterYear && t.Category == "Debit").Sum(t => t.Amount);
+        TotalIncome = filteredTransactions.Where(t => t.Category == "Credit").Sum(t => t.Amount);
+        TotalExpenses = filteredTransactions.Where(t => t.Category == "Debit").Sum(t => t.Amount);
+
+        HighestTransactionAmount = filteredTransactions.Max(t => t.Amount);
+        LowestTransactionAmount = filteredTransactions.Min(t => t.Amount);
 
         // Pulling all debt amounts in a list
         debts = DebtService.GetAllDebts();
         SelectedCurrency = UserService.GetLoggedInUser().SelectedCurrency;
         pendingDebts = debts.Where(d => d.Status == "Pending").ToList();
+        paidDebts = debts.Where(d => d.Status == "Paid").ToList();
 
+        TotalDebtAmount = debts.Sum(d => d.Amount);
         TotalUnpaidDebtAmount = pendingDebts.Sum(d => d.Amount);
+        TotalPaidDebtAmount = paidDebts.Sum(d => d.Amount);
     }
 }
+

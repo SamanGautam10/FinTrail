@@ -163,6 +163,8 @@
                 ErrorMessage = "Failed to add debt. Please try again.";
             }
         }
+
+        // Gives exception in case of error
         catch (Exception ex)
         {
             ErrorMessage = $"{ex.Message}";
